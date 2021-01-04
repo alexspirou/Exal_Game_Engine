@@ -1,0 +1,10 @@
+-I/usr/include/c++/7
+-I/usr/include/x86_64-linux-gnu/c++/7
+-I/usr/include/c++/7/backward
+-I/usr/lib/gcc/x86_64-linux-gnu/7/include
+-I/usr/local/include
+-I/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed
+-I/usr/include/x86_64-linux-gnu
+-I/usr/include
+-I/home/alex/Dropbox/Alex/Programming/Programming_Tutorials/Exal_Game_Engine/Exal_Game_Engine/v1
+-std=c++17

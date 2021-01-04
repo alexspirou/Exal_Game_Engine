@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeLite_Project Name="v1" Version="11000" InternalType="Console">
+  <Description/>
+  <Dependencies/>
+  <VirtualDirectory Name="src">
+    <File Name="main.cpp"/>
+    <VirtualDirectory Name="Graphics">
+      <File Name="src/Graphics/TextureManager.cpp"/>
+      <File Name="src/Graphics/TextureManager.h"/>
+    </VirtualDirectory>
+    <VirtualDirectory Name="Core">
+      <File Name="src/Core/Engine.cpp"/>
+      <File Name="src/Core/Engine.h"/>
+    </VirtualDirectory>
+  </VirtualDirectory>
+  <Settings Type="Executable">
+    <GlobalSettings>
+      <Compiler Options="" C_Options="" Assembler="">
+        <IncludePath Value="."/>
+      </Compiler>
+      <Linker Options="">
+        <LibraryPath Value="."/>
+      </Linker>
+      <ResourceCompiler Options=""/>
+    </GlobalSettings>
+    <Configuration Name="Debug" CompilerType="GCC" DebuggerType="" Type="Executable" BuildCmpWithGlobalSettings="append" BuildLnkWithGlobalSettings="append" BuildResWithGlobalSettings="append">
+      <Compiler Options="-g;-O0;-std=c++17;-Wall" C_Options="-g;-O0;-Wall" Assembler="" Required="yes" PreCompiledHeader="" PCHInCommandLine="no" PCHFlags="" PCHFlagsPolicy="0">
+        <IncludePath Value="."/>
+      </Compiler>
+      <Linker Options="" Required="yes">
+        <Library Value="SDL2"/>
+        <Library Value="SDL2_image"/>
+      </Linker>
+      <ResourceCompiler Options="" Required="no"/>
+      <General OutputFile="$(IntermediateDirectory)/$(ProjectName)" IntermediateDirectory="$(ConfigurationName)" Command="$(OutputFile)" CommandArguments="" UseSeparateDebugArgs="no" DebugArguments="" WorkingDirectory="" PauseExecWhenProcTerminates="yes" IsGUIProgram="no" IsEnabled="yes"/>
+      <BuildSystem Name="Default"/>
+      <Environment EnvVarSetName="&lt;Use Defaults&gt;" DbgSetName="&lt;Use Defaults&gt;">
+        <![CDATA[]]>
+      </Environment>
+      <Debugger IsRemote="no" RemoteHostName="" RemoteHostPort="" DebuggerPath="" IsExtended="no">
+        <DebuggerSearchPaths/>
+        <PostConnectCommands/>
+        <StartupCommands/>
+      </Debugger>
+      <PreBuild/>
+      <PostBuild/>
+      <CustomBuild Enabled="no">
+        <RebuildCommand/>
+        <CleanCommand/>
+        <BuildCommand/>
+        <PreprocessFileCommand/>
+        <SingleFileCommand/>
+        <MakefileGenerationCommand/>
+        <ThirdPartyToolName>None</ThirdPartyToolName>
+        <WorkingDirectory/>
+      </CustomBuild>
+      <AdditionalRules>
+        <CustomPostBuild/>
+        <CustomPreBuild/>
+      </AdditionalRules>
+      <Completion EnableCpp11="no" EnableCpp14="no">
+        <ClangCmpFlagsC/>
+        <ClangCmpFlags/>
+        <ClangPP/>
+        <SearchPaths/>
+      </Completion>
+    </Configuration>
+    <Configuration Name="Release" CompilerType="GCC" DebuggerType="" Type="Executable" BuildCmpWithGlobalSettings="append" BuildLnkWithGlobalSettings="append" BuildResWithGlobalSettings="append">
+      <Compiler Options="-O2;-Wall" C_Options="-O2;-Wall" Assembler="" Required="yes" PreCompiledHeader="" PCHInCommandLine="no" PCHFlags="" PCHFlagsPolicy="0">
+        <IncludePath Value="."/>
+        <Preprocessor Value="NDEBUG"/>
+      </Compiler>
+      <Linker Options="" Required="yes"/>
+      <ResourceCompiler Options="" Required="no"/>
+      <General OutputFile="$(ProjectName)" IntermediateDirectory="" Command="$(WorkspacePath)/build-$(WorkspaceConfiguration)/bin/$(OutputFile)" CommandArguments="" UseSeparateDebugArgs="no" DebugArguments="" WorkingDirectory="$(WorkspacePath)/build-$(WorkspaceConfiguration)/lib" PauseExecWhenProcTerminates="yes" IsGUIProgram="no" IsEnabled="yes"/>
+      <BuildSystem Name="CodeLite Makefile Generator"/>
+      <Environment EnvVarSetName="&lt;Use Defaults&gt;" DbgSetName="&lt;Use Defaults&gt;">
+        <![CDATA[]]>
+      </Environment>
+      <Debugger IsRemote="no" RemoteHostName="" RemoteHostPort="" DebuggerPath="" IsExtended="no">
+        <DebuggerSearchPaths/>
+        <PostConnectCommands/>
+        <StartupCommands/>
+      </Debugger>
+      <PreBuild/>
+      <PostBuild/>
+      <CustomBuild Enabled="no">
+        <RebuildCommand/>
+        <CleanCommand/>
+        <BuildCommand/>
+        <PreprocessFileCommand/>
+        <SingleFileCommand/>
+        <MakefileGenerationCommand/>
+        <ThirdPartyToolName>None</ThirdPartyToolName>
+        <WorkingDirectory/>
+      </CustomBuild>
+      <AdditionalRules>
+        <CustomPostBuild/>
+        <CustomPreBuild/>
+      </AdditionalRules>
+      <Completion EnableCpp11="no" EnableCpp14="no">
+        <ClangCmpFlagsC/>
+        <ClangCmpFlags/>
+        <ClangPP/>
+        <SearchPaths/>
+      </Completion>
+    </Configuration>
+  </Settings>
+</CodeLite_Project>
