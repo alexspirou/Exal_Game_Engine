@@ -1,7 +1,7 @@
 #include "Engine.h"
 #include <iostream>
 #include "src/Graphics/TextureManager.h"
-
+#include "src/Physics/Vector2D.h"
 SDL_Renderer* Engine::m_renderer = nullptr;
 TextureManager texManager;
 bool Engine::init()
@@ -34,9 +34,9 @@ bool Engine::init()
 
     //Load Image
    
-    texManager.load("player","character.png");
+    texManager.load("player","src/assets/character.png");
 
-
+   
         
     return m_isRunning = true;
 }
@@ -49,7 +49,7 @@ void Engine::render()
 {
     SDL_RenderClear(m_renderer);
     
-    texManager.draw("palyer", 100, 100, 100 ,23);
+    texManager.draw("player", 100, 100, 576/8, 368/8);
     
     SDL_RenderPresent(m_renderer);
     
