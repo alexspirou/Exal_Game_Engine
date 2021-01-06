@@ -9,7 +9,14 @@ public:
     
     //Constructor
     Vector2D(float x = 0, float y = 0): m_x(x), m_y(y) {}
-
+    Vector2D(Vector2D &vec)
+    {
+        m_x = vec.m_x;
+        m_y = vec.m_y;
+    
+        
+    }
+    
     //Operator Overloading
     // << 
     friend std::ostream &operator << (std::ostream& output, Vector2D &v)
@@ -42,12 +49,54 @@ public:
         if (scalar!=0)
         return Vector2D(m_x / scalar, m_y / scalar);
         else
+        {
             std::cout << "Forbidden divide with " << scalar << std::endl;
+            return 1;
+        }
+        
     }
-    
-    Vector2D operator*=(float scalar);
-    Vector2D operator/=(float scalar);
-    
+    // +=
+    Vector2D &operator+=(const Vector2D vec)
+    {
+        m_x += vec.m_x;
+        m_y += vec.m_y;
+        
+        return *this;
+    }    
+    //-=
+    Vector2D &operator-=(const Vector2D vec)
+    {
+        m_x -= vec.m_x;
+        m_y -= vec.m_y;
+        return *this;
+    }
+    Vector2D &operator*=(float scalar)
+    {
+        m_x *= scalar;
+        m_y *= scalar;
+        return *this;
+    }
+    // /=
+    Vector2D &operator/=(float scalar)
+    {
+        m_x /= m_x / scalar;
+        m_y /= m_y / scalar;
+        return *this;
+    }
+    // ++ (using: ++ vec! not vec ++)
+    Vector2D &operator++()
+    {
+        m_x ++;
+        m_y ++;
+        return *this;
+    }
+    // ++ (using: -- vec! not vec --)
+    Vector2D operator--()
+    {
+        m_x --;
+        m_y --;
+        return *this;
+    }
     // = 
     Vector2D &operator=( Vector2D &rhs)
     {
@@ -57,6 +106,7 @@ public:
         m_y = rhs.m_y;
         return *this;
     }
+
     // ==
     bool operator==( Vector2D &rhs)
     {
@@ -65,6 +115,38 @@ public:
         else 
             return false;
     }
+    // <
+    bool operator<(Vector2D &rhs)
+    {
+        if (m_x < rhs.m_x && m_y < rhs.m_y)
+            return true;
+        else
+            return false;
+    }
+    // >
+    bool operator>(Vector2D &rhs)
+    {
+        if (m_x > rhs.m_x && m_y > rhs.m_y)
+            return true;
+        else
+            return false;
+    }
+    // >=
+    bool operator>=(Vector2D &rhs)
+    {
+        if (m_x >= rhs.m_x && m_y >= rhs.m_y)
+            return true;
+        else
+            return false;
+    }
+    // <=
+    bool operator<=(Vector2D &rhs)
+    {
+        if (m_x <= rhs.m_x && m_y <= rhs.m_y)
+            return true;
+        else
+            return false;
+    }    
 };
 
 #endif // _VECTOR2D_H_
