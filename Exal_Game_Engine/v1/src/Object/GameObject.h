@@ -37,7 +37,6 @@ public:
         m_transform = nullptr;
         m_flip = SDL_FLIP_NONE;
     }
-    virtual ~GameObject() { delete [] m_transform; std::cout << m_transform << std::endl;}
     virtual void draw() = 0;
     virtual void clean() = 0;
     virtual void update(float dt) = 0;

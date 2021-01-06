@@ -3,6 +3,19 @@
   <Description/>
   <Dependencies/>
   <VirtualDirectory Name="src">
+    <VirtualDirectory Name="Characters">
+      <File Name="src/Characters/Mage.cpp"/>
+      <File Name="src/Characters/Mage.h"/>
+      <File Name="src/Characters/Character.h"/>
+    </VirtualDirectory>
+    <VirtualDirectory Name="Object">
+      <File Name="src/Object/GameObject.h"/>
+      <File Name="src/Object/IObject.h"/>
+    </VirtualDirectory>
+    <VirtualDirectory Name="Physics">
+      <File Name="src/Physics/Transform.h"/>
+      <File Name="src/Physics/Vector2D.h"/>
+    </VirtualDirectory>
     <File Name="main.cpp"/>
     <VirtualDirectory Name="Graphics">
       <File Name="src/Graphics/TextureManager.cpp"/>

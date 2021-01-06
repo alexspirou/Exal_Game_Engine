@@ -2,8 +2,12 @@
 #include <iostream>
 #include "src/Graphics/TextureManager.h"
 #include "src/Physics/Vector2D.h"
+#include "src/Characters/Mage.h"
+
 SDL_Renderer* Engine::m_renderer = nullptr;
+Mage* player = nullptr;
 TextureManager texManager;
+
 bool Engine::init()
 {       
         //Check if SDL is initialized
@@ -33,8 +37,8 @@ bool Engine::init()
 
 
     //Load Image
-   
-    texManager.load("player","src/assets/character.png");
+    player = new Mage(new Properties("player", 100, 200, 135, 96));
+    texManager.load("player","src/assets/idle.png");
 
    
         
@@ -43,13 +47,13 @@ bool Engine::init()
 
 void Engine::update()
 {
-    
+    player->update(0);
 }
 void Engine::render()
 {
     SDL_RenderClear(m_renderer);
     
-    texManager.draw("player", 100, 100, 576/8, 368/8);
+    player->draw();
     
     SDL_RenderPresent(m_renderer);
     

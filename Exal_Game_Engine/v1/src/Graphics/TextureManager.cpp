@@ -27,8 +27,16 @@ void TextureManager::draw(const char* id, int x, int y, int width, int height, S
 {
     SDL_Rect srcRect = {0 ,0, width, height};
     SDL_Rect dstRect = {x, y, width, height};
-    SDL_RenderCopyEx(Engine::m_renderer, m_textureMap[id], NULL, &dstRect, NULL , NULL, flip);
+    SDL_RenderCopyEx(Engine::m_renderer, m_textureMap[id], &srcRect, &dstRect, 0 , NULL, flip);
 }
+
+void  TextureManager::drawFrame(const char* id, int x, int y, int width, int height, int row, int frame, SDL_RendererFlip flip)
+{
+    SDL_Rect srcRect = {width*frame ,height* (row -1), width, height};
+    SDL_Rect dstRect = {x, y, width, height};
+    SDL_RenderCopyEx(Engine::m_renderer, m_textureMap[id], &srcRect, &dstRect, 0 , NULL, flip);
+}
+
 
 void TextureManager::drop(const char* id)
 {
