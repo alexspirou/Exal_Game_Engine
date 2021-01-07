@@ -1,0 +1,9 @@
+1)
+/home/alex/Dropbox/Alex/Programming/Programming_Tutorials/Exal_Game_Engine/Exal_Game_Engine/v1/src/Core/Engine.cpp:40:66: error: invalid new-expression of abstract class type 'Mage'
+     player = new Mage(new Properties("player", 100, 200, 135, 96));
+
+2)
+/home/alex/Dropbox/Alex/Programming/Programming_Tutorials/Exal_Game_Engine/Exal_Game_Engine/v1/src/Characters/Mage.cpp:6:29: error: no matching function for call to 'Character::Character()'
+ Mage::Mage(Properties* props)
+                             ^
+
