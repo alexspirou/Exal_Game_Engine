@@ -12,7 +12,7 @@ int main(int argc, char **argv)
 {
     //test code 
 
-    GameObject* player;
+
     
     // here
     

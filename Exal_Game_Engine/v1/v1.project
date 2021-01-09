@@ -4,9 +4,9 @@
   <Dependencies/>
   <VirtualDirectory Name="src">
     <VirtualDirectory Name="Characters">
+      <File Name="src/Characters/Character.h"/>
       <File Name="src/Characters/Mage.cpp"/>
       <File Name="src/Characters/Mage.h"/>
-      <File Name="src/Characters/Character.h"/>
     </VirtualDirectory>
     <VirtualDirectory Name="Object">
       <File Name="src/Object/GameObject.h"/>

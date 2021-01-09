@@ -1,5 +1,5 @@
-#ifndef _CHARACTER_H_
-#define _CHARACTER_H_
+#ifndef CHARACTER_H
+#define CHARACTER_H
 #include "src/Object/GameObject.h"
 
 class Character: public GameObject

@@ -1,13 +1,16 @@
 #include "Mage.h"
-#include "src/Graphics/TextureManager.h"
-#include "SDL2/SDL.h"
-TextureManager texManager;
 
-Mage::Mage(Properties* props)
-{
-    m_row = 1;
-    m_frameCount = 8; 
-}
+#include "SDL2/SDL.h"
+
+
+//Mage::Mage(Properties* props)
+//{
+//    m_row = 1;
+//    m_frameCount = 8; 
+//}
+
+
+
 
 void Mage::draw()
 {

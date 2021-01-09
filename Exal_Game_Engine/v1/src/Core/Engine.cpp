@@ -3,6 +3,7 @@
 #include "src/Graphics/TextureManager.h"
 #include "src/Physics/Vector2D.h"
 #include "src/Characters/Mage.h"
+#include "src/Object/GameObject.h"
 
 SDL_Renderer* Engine::m_renderer = nullptr;
 Mage* player = nullptr;
@@ -37,8 +38,9 @@ bool Engine::init()
 
 
     //Load Image
-    player = new Mage(new Properties("player", 100, 200, 135, 96));
     texManager.load("player","src/assets/idle.png");
+
+    player = new Mage(new Properties("player", 100, 200, 135, 96));
 
    
         
