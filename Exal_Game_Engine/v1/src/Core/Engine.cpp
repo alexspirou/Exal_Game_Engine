@@ -35,12 +35,13 @@ bool Engine::init()
     {
         SDL_Log("Fail to create renderer: %s", SDL_GetError());
     }
-
-
+    
+    texManager.load("player","src/assets/Idle.png");
+    player = new Mage(new Properties("player", 100, 200, 2000, 250));
     //Load Image
-    texManager.load("player","src/assets/idle.png");
+    
 
-    player = new Mage(new Properties("player", 100, 200, 135, 96));
+    
 
    
         
@@ -49,14 +50,15 @@ bool Engine::init()
 
 void Engine::update()
 {
-    player->update(0);
+   player->update(0);
 }
 void Engine::render()
 {
     SDL_RenderClear(m_renderer);
     
-    player->draw();
-    
+   player->draw();
+//   texManager.draw("player", 100, 100, 2000, 250);
+
     SDL_RenderPresent(m_renderer);
     
     
@@ -75,7 +77,11 @@ void Engine::event()
 }
 bool Engine::clean()
 {
-    
+    texManager.clean();
+    SDL_DestroyRenderer(m_renderer);
+    SDL_DestroyWindow(m_window);
+    IMG_Quit();
+    SDL_Quit();
 }
 void Engine::quit()
 {

@@ -2,13 +2,11 @@
 #define _MAGE_H_
 
 #include "src/Characters/Character.h"
-#include "src/Object/IObject.h"
 #include "src/Graphics/TextureManager.h"
-
 class Mage: public Character
 {
 public:
-    Mage(Properties* props): Character(props) {}
+    Mage(Properties* props);
     
     virtual void draw()override;
     virtual void clean() override;

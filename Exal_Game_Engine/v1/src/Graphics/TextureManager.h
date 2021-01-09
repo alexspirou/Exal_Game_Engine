@@ -19,6 +19,7 @@ public:
     std::map<const char*, SDL_Texture*> m_textureMap;
 
 private:
+    SDL_Rect srcRect;
 };
 
 #endif // TEXTUREMANAGER_H
