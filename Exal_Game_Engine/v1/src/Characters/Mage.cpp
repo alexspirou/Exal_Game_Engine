@@ -8,8 +8,8 @@
 Mage::Mage(Properties* props): Character(props)
 {
     m_row = 1;
-    m_frameCount = 7; 
-    m_animationSpeed = 40;
+    m_frameCount = 8; 
+    m_animationSpeed = 80;
 
 
 }
@@ -22,6 +22,7 @@ void Mage::draw()
 void Mage::update(float dt)
 {
     m_frame = SDL_GetTicks()/m_animationSpeed % m_frameCount;
+//    std::cout<<"Ticks: " << SDL_GetTicks() << std::endl;
  
 }
 

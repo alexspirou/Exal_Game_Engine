@@ -37,7 +37,7 @@ bool Engine::init()
     }
     
     texManager.load("player","src/assets/Idle.png");
-    player = new Mage(new Properties("player", 100, 200, 2000, 250));
+    player = new Mage(new Properties("player", 100, 200, 250, 32));
     //Load Image
     
 
