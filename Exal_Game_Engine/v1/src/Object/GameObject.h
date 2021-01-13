@@ -8,7 +8,7 @@ struct Properties{
     
 public:
     Properties(const char* pr_textureID, int p_x, int p_y, int p_width, int p_height, SDL_RendererFlip flip = SDL_FLIP_NONE){
-        X = p_x;
+        X = p_x; //p vars = when the constructro called values
         Y = p_y;
         Flip = flip;
         Width = p_width;

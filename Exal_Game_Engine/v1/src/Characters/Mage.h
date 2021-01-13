@@ -13,7 +13,8 @@ public:
     virtual void update(float dt) override;
 
 private:
-    int m_row, m_frame, m_frameCount, m_animationSpeed;
+    int m_row, m_frame, m_frameCount, m_animationSpeed, m_x, m_y;
+    SDL_Rect srcRect, dstRect;
     TextureManager texManager;
 };
 
