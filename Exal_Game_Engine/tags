@@ -1,0 +1,4 @@
+METEORS_H	/home/alex/Dropbox/Alex/Programming/Programming_Tutorials/Exal_Game_Engine/Exal_Game_Engine/v1/src/Characters/Meteors.h	/^#define METEORS_H$/;"	macro	line:2
+Meteors	/home/alex/Dropbox/Alex/Programming/Programming_Tutorials/Exal_Game_Engine/Exal_Game_Engine/v1/src/Characters/Meteors.h	/^class Meteors$/;"	class	line:4
+Meteors	/home/alex/Dropbox/Alex/Programming/Programming_Tutorials/Exal_Game_Engine/Exal_Game_Engine/v1/src/Characters/Meteors.h	/^    Meteors();$/;"	prototype	line:7	class:Meteors	access:public	signature:()
+~Meteors	/home/alex/Dropbox/Alex/Programming/Programming_Tutorials/Exal_Game_Engine/Exal_Game_Engine/v1/src/Characters/Meteors.h	/^    ~Meteors();$/;"	prototype	line:8	class:Meteors	access:public	signature:()

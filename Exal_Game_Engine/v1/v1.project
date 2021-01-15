@@ -4,6 +4,9 @@
   <Dependencies/>
   <VirtualDirectory Name="src">
     <VirtualDirectory Name="Characters">
+      <File Name="src/Characters/Enemy.h"/>
+      <File Name="src/Characters/Meteors.cpp"/>
+      <File Name="src/Characters/Meteors.h"/>
       <File Name="src/Characters/Character.h"/>
       <File Name="src/Characters/Mage.cpp"/>
       <File Name="src/Characters/Mage.h"/>

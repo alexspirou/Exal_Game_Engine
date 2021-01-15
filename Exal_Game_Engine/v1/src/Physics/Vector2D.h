@@ -17,6 +17,15 @@ public:
         
     }
     
+    float increament_x(float x)
+    {
+        return m_x  += x;
+    }
+        float increament_y(float y)
+    {
+        return m_y += y;
+    }
+    
     //Operator Overloading
     // << 
     friend std::ostream &operator << (std::ostream& output, Vector2D &v)
@@ -147,6 +156,14 @@ public:
         else
             return false;
     }    
+    // []
+    int operator[](const int index)
+    {
+        if (index == 0) return m_x;
+        if (index == 1 ) return m_x;
+        
+    }
 };
+
 
 #endif // _VECTOR2D_H_

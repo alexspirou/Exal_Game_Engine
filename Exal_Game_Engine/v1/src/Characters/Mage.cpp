@@ -10,8 +10,6 @@ Mage::Mage(Properties* props): Character(props)
 
     texManager.load("player","src/assets/character.png");
 
-
-
 }
 void Mage::draw()
 {
