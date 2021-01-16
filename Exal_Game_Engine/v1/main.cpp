@@ -32,12 +32,13 @@ int main(int argc, char **argv)
         engine->update();
         //Render the changes
         engine->render();
-    }
-    frameTime = SDL_GetTicks() - frameStart;
+    
+        frameTime = SDL_GetTicks() - frameStart;
 
     if (frameDelay > frameTime)
-    {
-        SDL_Delay(frameDelay - frameTime);
+        {
+            SDL_Delay(frameDelay - frameTime);
+        }
     }
     engine->clean();
     

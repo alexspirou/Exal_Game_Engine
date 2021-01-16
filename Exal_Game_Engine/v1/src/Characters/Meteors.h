@@ -9,7 +9,7 @@ class Meteors: public Enemy
 {
 public:
     Meteors(Properties* props);
-    ~Meteors(){}
+    ~Meteors(){delete transforms;}
     virtual void draw();
     virtual void update(float dt);
     virtual void clean();
@@ -17,10 +17,9 @@ public:
     
 private:
     TextureManager texManager;
-    Transform transforms;
-    float m_x {0};
-    float m_y {0};
-    Vector2D meteor_movement{m_x, m_y};
+    Transform* transforms = new Transform();
+    float m_x, m_y;
+Vector2D meteor_vec{m_x, m_y};
 
     
 };

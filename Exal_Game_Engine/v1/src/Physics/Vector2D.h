@@ -14,7 +14,6 @@ public:
         m_x = vec.m_x;
         m_y = vec.m_y;
     
-        
     }
     
     float increament_x(float x)

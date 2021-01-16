@@ -33,6 +33,7 @@ public:
         m_flip = props->Flip;
         m_transform = new Transform(props->X, props->Y);
     }
+    ~GameObject(){std::cout << "Destructor Called " << std::endl;}
     virtual void draw() = 0 ;
     virtual void clean() = 0 ;
     virtual void update(float dt) = 0;

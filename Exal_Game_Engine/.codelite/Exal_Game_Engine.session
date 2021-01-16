@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Session Name="/home/alex/Dropbox/Alex/Programming/Programming_Tutorials/Exal_Game_Engine/Exal_Game_Engine/Exal_Game_Engine.workspace">
-  <int Value="9" Name="m_selectedTab"/>
+  <int Value="13" Name="m_selectedTab"/>
   <wxString Value="/home/alex/Dropbox/Alex/Programming/Programming_Tutorials/Exal_Game_Engine/Exal_Game_Engine/Exal_Game_Engine.workspace" Name="m_workspaceName"/>
   <TabInfoArray Name="TabInfoArray">
     <TabInfo>
@@ -12,36 +12,36 @@
     </TabInfo>
     <TabInfo>
       <wxString Value="/home/alex/Dropbox/Alex/Programming/Programming_Tutorials/Exal_Game_Engine/Exal_Game_Engine/v1/src/Object/GameObject.h" Name="FileName"/>
-      <int Value="12" Name="FirstVisibleLine"/>
-      <int Value="14" Name="CurrentLine"/>
+      <int Value="33" Name="FirstVisibleLine"/>
+      <int Value="35" Name="CurrentLine"/>
       <wxArrayString Name="Bookmarks"/>
       <IntVector Name="CollapsedFolds"/>
     </TabInfo>
     <TabInfo>
       <wxString Value="/home/alex/Dropbox/Alex/Programming/Programming_Tutorials/Exal_Game_Engine/Exal_Game_Engine/v1/src/Characters/Mage.h" Name="FileName"/>
-      <int Value="15" Name="FirstVisibleLine"/>
-      <int Value="17" Name="CurrentLine"/>
+      <int Value="16" Name="FirstVisibleLine"/>
+      <int Value="18" Name="CurrentLine"/>
       <wxArrayString Name="Bookmarks"/>
       <IntVector Name="CollapsedFolds"/>
     </TabInfo>
     <TabInfo>
       <wxString Value="/home/alex/Dropbox/Alex/Programming/Programming_Tutorials/Exal_Game_Engine/Exal_Game_Engine/v1/src/Characters/Mage.cpp" Name="FileName"/>
-      <int Value="33" Name="FirstVisibleLine"/>
-      <int Value="34" Name="CurrentLine"/>
+      <int Value="4" Name="FirstVisibleLine"/>
+      <int Value="6" Name="CurrentLine"/>
       <wxArrayString Name="Bookmarks"/>
       <IntVector Name="CollapsedFolds"/>
     </TabInfo>
     <TabInfo>
       <wxString Value="/home/alex/Dropbox/Alex/Programming/Programming_Tutorials/Exal_Game_Engine/Exal_Game_Engine/v1/src/Graphics/TextureManager.cpp" Name="FileName"/>
-      <int Value="9" Name="FirstVisibleLine"/>
-      <int Value="16" Name="CurrentLine"/>
+      <int Value="20" Name="FirstVisibleLine"/>
+      <int Value="21" Name="CurrentLine"/>
       <wxArrayString Name="Bookmarks"/>
       <IntVector Name="CollapsedFolds"/>
     </TabInfo>
     <TabInfo>
       <wxString Value="/home/alex/Dropbox/Alex/Programming/Programming_Tutorials/Exal_Game_Engine/Exal_Game_Engine/v1/src/Graphics/TextureManager.h" Name="FileName"/>
-      <int Value="0" Name="FirstVisibleLine"/>
-      <int Value="13" Name="CurrentLine"/>
+      <int Value="5" Name="FirstVisibleLine"/>
+      <int Value="15" Name="CurrentLine"/>
       <wxArrayString Name="Bookmarks"/>
       <IntVector Name="CollapsedFolds"/>
     </TabInfo>
@@ -54,22 +54,22 @@
     </TabInfo>
     <TabInfo>
       <wxString Value="/home/alex/Dropbox/Alex/Programming/Programming_Tutorials/Exal_Game_Engine/Exal_Game_Engine/v1/src/Physics/Transform.h" Name="FileName"/>
-      <int Value="0" Name="FirstVisibleLine"/>
+      <int Value="9" Name="FirstVisibleLine"/>
       <int Value="11" Name="CurrentLine"/>
       <wxArrayString Name="Bookmarks"/>
       <IntVector Name="CollapsedFolds"/>
     </TabInfo>
     <TabInfo>
       <wxString Value="/home/alex/Dropbox/Alex/Programming/Programming_Tutorials/Exal_Game_Engine/Exal_Game_Engine/v1/src/Core/Engine.h" Name="FileName"/>
-      <int Value="0" Name="FirstVisibleLine"/>
+      <int Value="8" Name="FirstVisibleLine"/>
       <int Value="10" Name="CurrentLine"/>
       <wxArrayString Name="Bookmarks"/>
       <IntVector Name="CollapsedFolds"/>
     </TabInfo>
     <TabInfo>
       <wxString Value="/home/alex/Dropbox/Alex/Programming/Programming_Tutorials/Exal_Game_Engine/Exal_Game_Engine/v1/src/Core/Engine.cpp" Name="FileName"/>
-      <int Value="43" Name="FirstVisibleLine"/>
-      <int Value="11" Name="CurrentLine"/>
+      <int Value="71" Name="FirstVisibleLine"/>
+      <int Value="73" Name="CurrentLine"/>
       <wxArrayString Name="Bookmarks"/>
       <IntVector Name="CollapsedFolds"/>
     </TabInfo>
@@ -82,8 +82,8 @@
     </TabInfo>
     <TabInfo>
       <wxString Value="/home/alex/Dropbox/Alex/Programming/Programming_Tutorials/Exal_Game_Engine/Exal_Game_Engine/v1/src/Physics/Vector2D.h" Name="FileName"/>
-      <int Value="0" Name="FirstVisibleLine"/>
-      <int Value="10" Name="CurrentLine"/>
+      <int Value="22" Name="FirstVisibleLine"/>
+      <int Value="24" Name="CurrentLine"/>
       <wxArrayString Name="Bookmarks"/>
       <IntVector Name="CollapsedFolds"/>
     </TabInfo>
@@ -96,15 +96,22 @@
     </TabInfo>
     <TabInfo>
       <wxString Value="/home/alex/Dropbox/Alex/Programming/Programming_Tutorials/Exal_Game_Engine/Exal_Game_Engine/v1/src/Characters/Meteors.h" Name="FileName"/>
-      <int Value="0" Name="FirstVisibleLine"/>
-      <int Value="20" Name="CurrentLine"/>
+      <int Value="6" Name="FirstVisibleLine"/>
+      <int Value="25" Name="CurrentLine"/>
       <wxArrayString Name="Bookmarks"/>
       <IntVector Name="CollapsedFolds"/>
     </TabInfo>
     <TabInfo>
       <wxString Value="/home/alex/Dropbox/Alex/Programming/Programming_Tutorials/Exal_Game_Engine/Exal_Game_Engine/v1/src/Characters/Meteors.cpp" Name="FileName"/>
+      <int Value="9" Name="FirstVisibleLine"/>
+      <int Value="16" Name="CurrentLine"/>
+      <wxArrayString Name="Bookmarks"/>
+      <IntVector Name="CollapsedFolds"/>
+    </TabInfo>
+    <TabInfo>
+      <wxString Value="/home/alex/Dropbox/Alex/Programming/Programming_Tutorials/Exal_Game_Engine/Exal_Game_Engine/v1/src/Characters/Enemy.h" Name="FileName"/>
       <int Value="0" Name="FirstVisibleLine"/>
-      <int Value="19" Name="CurrentLine"/>
+      <int Value="0" Name="CurrentLine"/>
       <wxArrayString Name="Bookmarks"/>
       <IntVector Name="CollapsedFolds"/>
     </TabInfo>
@@ -289,7 +296,7 @@
     </SerializedObject>
     <SerializedObject Name="Breakpoint11">
       <wxString Value="/home/alex/Dropbox/Alex/Programming/Programming_Tutorials/Exal_Game_Engine/Exal_Game_Engine/v1/src/Physics/Vector2D.h" Name="file"/>
-      <int Value="11" Name="lineno"/>
+      <int Value="109" Name="lineno"/>
       <wxString Value="" Name="function_name"/>
       <wxString Value="" Name="memory_address"/>
       <int Value="1" Name="bp_type"/>
@@ -305,7 +312,7 @@
     </SerializedObject>
     <SerializedObject Name="Breakpoint12">
       <wxString Value="/home/alex/Dropbox/Alex/Programming/Programming_Tutorials/Exal_Game_Engine/Exal_Game_Engine/v1/src/Physics/Vector2D.h" Name="file"/>
-      <int Value="110" Name="lineno"/>
+      <int Value="11" Name="lineno"/>
       <wxString Value="" Name="function_name"/>
       <wxString Value="" Name="memory_address"/>
       <int Value="1" Name="bp_type"/>
@@ -321,7 +328,7 @@
     </SerializedObject>
     <SerializedObject Name="Breakpoint13">
       <wxString Value="/home/alex/Dropbox/Alex/Programming/Programming_Tutorials/Exal_Game_Engine/Exal_Game_Engine/v1/src/Physics/Vector2D.h" Name="file"/>
-      <int Value="96" Name="lineno"/>
+      <int Value="95" Name="lineno"/>
       <wxString Value="" Name="function_name"/>
       <wxString Value="" Name="memory_address"/>
       <int Value="1" Name="bp_type"/>

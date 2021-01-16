@@ -1,35 +1,44 @@
 #include "Mage.h"
-
 #include "SDL2/SDL.h"
-
-    
-    
 
 Mage::Mage(Properties* props): Character(props)
 {
-
     texManager.load("player","src/assets/character.png");
-
+    m_x = m_y = 50;
 }
 void Mage::draw()
 {
-    //texManager.drawFrame(m_textureID, m_x, m_y, m_width, m_height, m_row, m_frame);
-    //    texManager.draw(m_textureID)
-    texManager.draw("player", 100, 200, 60, 50);
-
+    texManager.draw("player", m_x, m_y, 60, 50);
 }
 void Mage::update(float dt)
 {
-    while (m_frameCount == 8)
-        {
-            m_frame = SDL_GetTicks()/m_animationSpeed;
-            m_frameCount --;
-        }
-//    std::cout<<"Framecount: " << m_frame << std::endl;
- 
-}
+  
+    SDL_Event event;
+    SDL_PollEvent(&event);    
+    switch (event.type)
+    {
+        case SDL_KEYDOWN:
+    
+    {   
+        if (event.key.keysym.sym == SDLK_RIGHT)
+            m_x += 8.1;
+            std::cout<<"X: "<<m_x<<std::endl;
+        if (event.key.keysym.sym == SDLK_LEFT)
+            m_x -= 8;
+            std::cout<<"X: "<<m_x<<std::endl;
+        if (event.key.keysym.sym == SDLK_UP)
+            m_y -= 8;
+            std::cout<<"Y: "<<m_y<<std::endl;
 
+        if (event.key.keysym.sym == SDLK_DOWN)
+            m_y += 8;
+            std::cout<<"Y: "<<m_y<<std::endl;
+    
+        }
+    }
+}
 void Mage::clean()
 {
    texManager.clean();
 }
+

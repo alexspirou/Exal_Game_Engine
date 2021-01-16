@@ -45,6 +45,7 @@ bool Engine::init()
 void Engine::update()
 {
     meteors->update(0);
+    player->update(0);
 }
 void Engine::render()
 {
@@ -64,7 +65,8 @@ void Engine::event()
 {
      
     SDL_Event event;
-    SDL_PollEvent(&event);    switch (event.type)
+    SDL_PollEvent(&event);    
+    switch (event.type)
     {
         case SDL_QUIT:
             quit();
