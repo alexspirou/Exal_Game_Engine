@@ -22,5 +22,6 @@ private:
     SDL_Window* m_window;
     bool m_isRunning;
     SDL_bool collision;
+    bool gameover;
 };
 #endif // _ENGINE_H_

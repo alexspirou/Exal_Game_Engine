@@ -5,7 +5,7 @@
 class Enemy: public GameObject
 {
 public:
-    Enemy(Properties* props): GameObject(props) {}
+    Enemy(): GameObject() {}
     
     virtual void draw() = 0;
     virtual void clean() = 0;

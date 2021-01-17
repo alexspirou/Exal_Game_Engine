@@ -13,19 +13,17 @@
 
 int main(int argc, char **argv)
 {
-    //test code 
-
-
-    
-    // here
-    const int FPS  = 60;
+    Engine* engine = nullptr;
+    const int FPS  = 120;
     const int frameDelay = 1000/FPS;
     Uint32 frameStart{0};
     int frameTime{0};
-	Engine* engine = new Engine;
+    int a =0;
+	engine = new Engine;
     engine->init();
     while (engine->isRunning())
     {
+        frameStart = SDL_GetTicks();
         //Handle all the inputs from user
         engine->event();
         //Update the changes
@@ -33,16 +31,21 @@ int main(int argc, char **argv)
         //Render the changes
         engine->render();
     
-        frameTime = SDL_GetTicks() - frameStart;
-
-    if (frameDelay > frameTime)
-        {
-            SDL_Delay(frameDelay - frameTime);
-        }
+      
+    
+//    frameTime = SDL_GetTicks() - frameStart;
+//    
+//    if (frameDelay > frameTime)
+//        {
+//            
+//            SDL_Delay(frameDelay - frameTime);
+//            
+//        }
+     
     }
     engine->clean();
     
-
+   
 	return 0;
 }
 

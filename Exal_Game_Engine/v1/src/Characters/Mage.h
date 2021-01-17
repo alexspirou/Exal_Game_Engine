@@ -8,7 +8,7 @@ class Mage: public Character
 {
 public:
    
-    Mage(Properties* props);
+    Mage();
     
     virtual void draw()override;
     virtual void clean() override;

@@ -8,7 +8,7 @@
 class Meteors: public Enemy
 {
 public:
-    Meteors(Properties* props);
+    Meteors(int x, int y, int w, int h);
     virtual ~Meteors(){}
     virtual void draw();
     virtual void update(float dt);

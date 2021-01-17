@@ -5,7 +5,7 @@
 class Character: public GameObject
 {
 public:
-    Character(Properties* props): GameObject(props) {}
+    Character(): GameObject() {}
     
     virtual void draw() = 0;
     virtual void clean() = 0;

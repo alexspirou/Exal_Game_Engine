@@ -1,7 +1,7 @@
 #include "Mage.h"
 #include "SDL2/SDL.h"
 #include "Meteors.h"
-Mage::Mage(Properties* props): Character(props)
+Mage::Mage(): Character()
 {
 
     texManager.load("player","src/assets/character.png");
@@ -20,7 +20,6 @@ void Mage::draw()
 void Mage::update(float dt)
 {
   
-
 }
 
 void Mage::events()
