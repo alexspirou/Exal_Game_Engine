@@ -9,18 +9,15 @@ class Meteors: public Enemy
 {
 public:
     Meteors(Properties* props);
-    ~Meteors(){delete transforms;}
+    virtual ~Meteors(){}
     virtual void draw();
     virtual void update(float dt);
     virtual void clean();
-    
-    
+    SDL_Rect get_rect(){return destRect;}
+    SDL_Rect destRect;
 private:
     TextureManager texManager;
-    Transform* transforms = new Transform();
-    float m_x, m_y;
-Vector2D meteor_vec{m_x, m_y};
-
+    
     
 };
 #endif // METEORS_H

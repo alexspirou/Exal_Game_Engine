@@ -1,18 +1,30 @@
 #include "Mage.h"
 #include "SDL2/SDL.h"
-
+#include "Meteors.h"
 Mage::Mage(Properties* props): Character(props)
 {
+
     texManager.load("player","src/assets/character.png");
-    m_x = m_y = 50;
+    
+    destRect.x = 50;
+    destRect.y = 50;
+    destRect.w = 60;
+    destRect.h = 50;
 }
 void Mage::draw()
 {
-    texManager.draw("player", m_x, m_y, 60, 50);
+    
+    texManager.draw("player", destRect.x, destRect.y, destRect.w, destRect.h);
+    
 }
 void Mage::update(float dt)
 {
   
+
+}
+
+void Mage::events()
+{
     SDL_Event event;
     SDL_PollEvent(&event);    
     switch (event.type)
@@ -21,21 +33,26 @@ void Mage::update(float dt)
     
     {   
         if (event.key.keysym.sym == SDLK_RIGHT)
-            m_x += 8.1;
-            std::cout<<"X: "<<m_x<<std::endl;
+            destRect.x += 8.1;
+            
         if (event.key.keysym.sym == SDLK_LEFT)
-            m_x -= 8;
-            std::cout<<"X: "<<m_x<<std::endl;
+            destRect.x -= 8;
         if (event.key.keysym.sym == SDLK_UP)
-            m_y -= 8;
-            std::cout<<"Y: "<<m_y<<std::endl;
+            destRect.y -= 8;
 
         if (event.key.keysym.sym == SDLK_DOWN)
-            m_y += 8;
-            std::cout<<"Y: "<<m_y<<std::endl;
+            destRect.y += 8;
     
         }
     }
+}
+bool Mage::check_collision(Meteors *p)
+{
+   
+    if (SDL_HasIntersection(&destRect, &p->destRect))
+    {
+    return true;
+    }else {return false;}
 }
 void Mage::clean()
 {

@@ -39,6 +39,8 @@ bool Engine::init()
     player = new Mage(new Properties("player", 100, 200, 250, 32));
     meteors = new Meteors(new Properties("meteor", 100, 200, 50, 50));
     texManager.load("backround", "src/assets/backround.png");
+    
+    
     return m_isRunning = true;
 }
 
@@ -46,20 +48,23 @@ void Engine::update()
 {
     meteors->update(0);
     player->update(0);
+    player->events();
+
 }
 void Engine::render()
 {
     SDL_RenderClear(m_renderer);
     
-
-//   texManager.draw("player", 100, 100, 50, 50);
     texManager.draw("backround", 0, 0, 640, 800);
-    player->draw();
+    if(!player->check_collision(meteors))
+        {
+            player->draw();
+        }
+    else{quit();}
     meteors->draw();
-    
+    meteors->draw();
+    meteors->draw();
     SDL_RenderPresent(m_renderer);
-    
-    
 }
 void Engine::event()
 {

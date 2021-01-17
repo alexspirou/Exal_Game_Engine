@@ -15,10 +15,12 @@ public:
     void render(); // Render all graphics
     void event(); //Handle the user's inputs
     void quit(); // Quit program, destroy what it needs to be destroyed
+    
     inline bool isRunning() {return m_isRunning;}
     static SDL_Renderer* m_renderer;
 private:
     SDL_Window* m_window;
     bool m_isRunning;
+    SDL_bool collision;
 };
 #endif // _ENGINE_H_
