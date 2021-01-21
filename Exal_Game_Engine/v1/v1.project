@@ -3,6 +3,10 @@
   <Description/>
   <Dependencies/>
   <VirtualDirectory Name="src">
+    <VirtualDirectory Name="Levels">
+      <File Name="src/Levels/Stages.cpp"/>
+      <File Name="src/Levels/Stages.h"/>
+    </VirtualDirectory>
     <VirtualDirectory Name="Characters">
       <File Name="src/Characters/Enemy.h"/>
       <File Name="src/Characters/Meteors.cpp"/>
