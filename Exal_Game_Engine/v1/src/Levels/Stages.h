@@ -1,7 +1,8 @@
 #ifndef STAGES_H
 #define STAGES_H
 #include "src/Characters/Meteors.h"
-
+#include "src/Characters/Mage.h"
+#include <vector>
 class Stages
 {
 public:
@@ -20,8 +21,12 @@ public:
     Meteors* meteors5 = nullptr;
     Meteors* meteors6 = nullptr;
     Meteors* meteors7 = nullptr;
+    Meteors* meteors8 = nullptr;
+    Meteors* meteors9 = nullptr;
+    Meteors* meteors10 = nullptr;
+    Mage* player = nullptr;
 private:
-
+    std::vector<int> xpos_vec;
 
 };
 

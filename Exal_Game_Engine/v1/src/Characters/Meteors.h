@@ -17,6 +17,7 @@ public:
     SDL_Rect destRect;
 private:
     TextureManager texManager;
+    Engine engine;
     
     
 };

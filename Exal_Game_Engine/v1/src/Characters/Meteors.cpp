@@ -15,12 +15,13 @@ Meteors::Meteors(int x, int y, int w, int h): Enemy()
 
 void Meteors::update(float dt)
 {
-    
-    destRect.x --;
-    if (destRect.x < -100)
-            destRect.x =900;
-//    std::cout << destRect.x << std::endl;
-    
+
+        
+//    destRect.x --;
+//
+//    if (destRect.x < -100)
+//            destRect.x =900;
+////    std::cout << destRect.x << std::endl
 }
 
 void Meteors::draw()
