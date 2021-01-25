@@ -2,7 +2,6 @@
 #define STAGES_H
 #include "src/Characters/Meteors.h"
 #include "src/Characters/Mage.h"
-#include <vector>
 class Stages
 {
 public:
@@ -11,23 +10,19 @@ public:
 
     void update();
     void render();
-    void level_1();
-    void level_2();
-    Meteors* meteors = nullptr;
-    Meteors* meteors1 = nullptr;
-    Meteors* meteors2 = nullptr;
-    Meteors* meteors3 = nullptr;
-    Meteors* meteors4 = nullptr;
-    Meteors* meteors5 = nullptr;
-    Meteors* meteors6 = nullptr;
-    Meteors* meteors7 = nullptr;
-    Meteors* meteors8 = nullptr;
-    Meteors* meteors9 = nullptr;
-    Meteors* meteors10 = nullptr;
-    Mage* player = nullptr;
+    bool check_colission();
+    bool level_1();
+    bool level_2();
+    void freeze();
+    void reset_level();
+    std::vector<Meteors*> meteors;
+    inline bool is_gameover(){return gameover;}
+    inline bool set_gameover(bool f_gameover){gameover =  f_gameover; }
 private:
-    std::vector<int> xpos_vec;
+    std::vector<SDL_Rect> m_destRect;
+    bool gameover = false;
+
+   
 
 };
-
 #endif // STAGES_H

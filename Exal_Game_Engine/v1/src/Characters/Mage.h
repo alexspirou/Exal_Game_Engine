@@ -4,23 +4,20 @@
 #include "src/Graphics/TextureManager.h"
 #include <iostream>
 #include "src/Characters/Meteors.h"
-class Mage: public Character
+class Mage
 {
 public:
    
     Mage();
-    
-    virtual void draw()override;
-    virtual void clean() override;
-    virtual void update(float dt) override;
+    void draw();
+    void clean() ;
     void events();
     bool check_collision(Meteors *obj);
+    void clear();
 private:
     SDL_Rect srcRect, destRect;
     TextureManager texManager;
     SDL_bool collision;
-
-    
 };
 
 #endif // _MAGE_H_

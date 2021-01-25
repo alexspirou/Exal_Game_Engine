@@ -5,19 +5,17 @@
 #include "src/Physics/Transform.h"
 #include  "vector"
 #include "src/Physics/Vector2D.h"
-class Meteors: public Enemy
+class Meteors
 {
 public:
     Meteors(int x, int y, int w, int h);
-    virtual ~Meteors(){}
-    virtual void draw();
-    virtual void update(float dt);
-    virtual void clean();
+    ~Meteors(){}
+    void draw();
+    void clean();
     SDL_Rect get_rect(){return destRect;}
     SDL_Rect destRect;
 private:
     TextureManager texManager;
-    Engine engine;
     
     
 };

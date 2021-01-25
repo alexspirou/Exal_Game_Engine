@@ -1,11 +1,7 @@
 #ifndef _GAMEOBJECT_H_
 #define _GAMEOBJECT_H_
-#include "src/Object/IObject.h"
-#include "src/Physics/Transform.h"
 #include "src/Core/Engine.h"
-#include <iostream>
-
-
+#include "src/Object/IObject.h"
 class GameObject : public IObject
 {
 public:

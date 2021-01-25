@@ -1,18 +1,10 @@
 #include "Engine.h"
 #include <iostream>
-#include "src/Graphics/TextureManager.h"
-#include "src/Physics/Vector2D.h"
-#include "src/Characters/Mage.h"
-#include "src/Characters/Meteors.h"
-#include "src/Levels/Stages.h"
 SDL_Renderer* Engine::m_renderer = nullptr;
-TextureManager texManager;
-Stages* levels = nullptr;
-Mage* player = nullptr;
-Meteors* meteor_c = nullptr;
+Mage* Engine::player = nullptr;
 bool Engine::init()
 {       
-        //Check if SDL is initialized
+    //Check if SDL is initialized
     if(SDL_Init(SDL_INIT_EVERYTHING)!= 0 )//|| IMG_Init(IMG_INIT_JPG || IMG_INIT_PNG)!= 0)
     {
         SDL_Log("Fail to init SDL: %s", SDL_GetError());
@@ -35,15 +27,14 @@ bool Engine::init()
         SDL_Log("Fail to create renderer: %s", SDL_GetError());
     }
     
-   
+    
     player = new Mage();
     levels = new Stages();
-    meteor_c = new Meteors(0, 0 , 0 ,0 );
-    texManager.load("backround", "src/assets/backround2.png");
+    texManager.load("backround", "src/assets/backround3.png");
     texManager.load("gameover", "src/assets/game_over.png");
+    texManager.load("again", "src/assets/play_again.png");
     texManager.load("energy", "src/assets/energy.png");
-     levels->level_1();
-     gameover = false;
+    levels->level_1();
     return m_isRunning = true;
 }
 
@@ -52,43 +43,43 @@ void Engine::update(){
     levels->update();
 }
 void Engine::render()
-{
-    if(!gameover)
+{   
+    if(!levels->is_gameover())
     {
     SDL_RenderClear(m_renderer);
     
-    texManager.draw("backround", 300, 0, 640, 800);
-    
-    levels->render();
-    if(!player->check_collision(levels->meteors)&& !player->check_collision(levels->meteors1) 
-    &&!player->check_collision(levels->meteors2) &&!player->check_collision(levels->meteors3) 
-    &&!player->check_collision(levels->meteors4) &&!player->check_collision(levels->meteors5) 
-    &&!player->check_collision(levels->meteors6) &&!player->check_collision(levels->meteors7))
-        {
-            player->draw();
-            
-        }
-    else{
-        gameover = true;
-            if(gameover)
-                {
-                
-                SDL_RenderClear(m_renderer);
-                texManager.draw("backround", 300, 0, 640, 800);
-                texManager.draw("gameover", 120, 50, 528, 528);
-                event();
-                SDL_RenderPresent(m_renderer);
-                }  
-            
+    texManager.draw("backround", 0, 0, 1000, 1000);
+    texManager.draw("energy", 80, 100, 50, 50);
+    texManager.draw("energy", 80, 550 ,50, 50);
+    texManager.draw("energy", 630, 100, 50, 50);
+    texManager.draw("energy", 630, 550, 50, 50);
 
-        }      
+    
+
+    levels->render(); 
+    
+    if (levels->check_colission()){
+        player->draw(); 
+    }else{
+    levels->set_gameover(true);
+        if(levels->is_gameover()){
+            SDL_RenderClear(m_renderer);
+            texManager.draw("backround", 0, 0, 1000, 1000);
+            texManager.draw("gameover", 250, 50, 528/2, 528/2);
+            texManager.draw("again", 0, 300, 800, 100);
+            event();
+            SDL_RenderPresent(m_renderer);
+            }
+    }
+          
+    
+    
+    
+    
     SDL_Delay(5);
     SDL_RenderPresent(m_renderer);
     }
 }   
-  
-   
-
 void Engine::event()
 {
     player->events();
@@ -101,8 +92,9 @@ void Engine::event()
             break;
         case SDL_KEYDOWN:
             if (event.key.keysym.sym == SDLK_F2)
-                meteor_c->destRect = {1500, 1000,50, 50}; 
-                gameover = false;
+                levels->reset_level();
+                levels->set_gameover(false);
+                
             break;
     }
     
@@ -117,9 +109,6 @@ bool Engine::clean()
 }
 void Engine::quit()
 {
-    gameover = false;
+    levels->set_gameover(false);
     m_isRunning = false;
-    
-    
-    
 }

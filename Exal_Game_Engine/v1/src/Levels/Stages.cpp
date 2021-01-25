@@ -1,73 +1,73 @@
 #include "Stages.h"
 #include "src/Graphics/TextureManager.h"
+#include <iostream>
+#include "src/Core/Engine.h"
 Stages::Stages()
 {
-    meteors = new Meteors(700  ,   0, 50, 50);
-    meteors1 = new Meteors(1000, 200, 50, 50);
-    meteors2 = new Meteors(1200, 400, 50, 50);
-    meteors3 = new Meteors(1400, 600, 50, 50);
-    meteors4 = new Meteors(1500, 800, 50, 50);
-    meteors5 = new Meteors(1600, 300, 50, 50);
-    meteors6 = new Meteors(1650, 250, 50, 50);
-    meteors7 = new Meteors(1700, 150, 80, 80);
-    meteors8 = new Meteors(1650, 250, 50, 50);
-    meteors9 = new Meteors(1700, 150, 80, 80);
-    meteors10 = new Meteors(1700, 150, 80, 80);
-    xpos_vec.at(0) = 1740;
+    meteors.resize(12, nullptr);
+    m_destRect.resize(12);
+    for(std::size_t i{0}; i<meteors.size(); i++)
+        meteors.at(i) = new Meteors(0, 0, 0, 0);
 }
 
 Stages::~Stages()
 {
-    delete meteors, meteors1, meteors2, meteors3,meteors4, meteors5, meteors6, meteors7, meteors8,
-    meteors9, meteors10;
+    delete [] &meteors;
 }
-
-void Stages::level_1(){
-    meteors->destRect =  {xpos_vec.at(0), 300, 100, 100};
-    meteors1->destRect = {1890, 50, 50, 50};
-    meteors2->destRect = {1940, 250, 50 ,50};
-    meteors3->destRect = {2040, 100, 50, 50};
-    meteors4->destRect = {1990, 400, 50, 50};
-    meteors5->destRect = {1840, 500, 50, 50};
-    meteors6->destRect = {1240, 550, 50, 50};
-    meteors7->destRect = {1100, 600, 50, 50};
-    meteors8->destRect = {1650, 550, 50, 50};
-    meteors9->destRect = {2040, 650, 50, 50};
-    meteors10->destRect = {1740, 700, 80, 80};
-     
+bool Stages::level_1(){
+    
+        meteors.at(0)->destRect =  {1200, 300, 100, 100};
+        meteors.at(1)->destRect = {1400, 50, 50, 50};
+        meteors.at(2)->destRect = {1600, 250, 50 ,50};
+        meteors.at(3)->destRect = {1700 ,100, 50, 50};
+        meteors.at(4)->destRect = {1800, 400, 50, 50};
+        meteors.at(5)->destRect = {1100, 500, 50, 50};
+        meteors.at(6)->destRect = {1500, 550, 50, 50};
+        meteors.at(7)->destRect = {1100, 600, 50, 50};
+        meteors.at(8)->destRect = {1650, 550, 50, 50};
+        meteors.at(9)->destRect = {2040, 650, 50, 50};
+        meteors.at(10)->destRect = {1740, 700, 80, 80};
+        //store init pos for reset the level
+        for(std::size_t i{0}; i<meteors.size(); i++)
+            m_destRect.at(i) = meteors.at(i) ->destRect;
+    return true;
 }
-void Stages::level_2(){
-    
-    
+bool Stages::level_2(){
+//level2     
 }
 void Stages::update(){
-    
-//    meteors->update(0);
-//    meteors1->update(0);
-//    meteors2->update(0);
-//    meteors3->update(0);
-//    meteors4->update(0);
-//    meteors5->update(0);
-//    meteors6->update(0);
-//    meteors7->update(0);
-//    meteors8->update(0);
-//    meteors9->update(0);
-//    meteors10->update(0);
-
-
+if(!is_gameover()){
+   for(std::size_t i{0}; i<meteors.size(); i++){
+        meteors.at(i)->destRect.x --;
+        if (meteors.at(i)->destRect.x < -100)
+            meteors.at(i)->destRect.x = 1000;
+        }
+    }
 }
 
 void Stages::render(){
-    meteors->draw();
-    meteors1->draw();
-    meteors2->draw();
-    meteors3->draw();
-    meteors4->draw();
-    meteors5->draw();
-    meteors6->draw();
-    meteors7->draw();
-    meteors8->draw();
-    meteors9->draw();
-    meteors10->draw();    
+   for(std::size_t i{0}; i<meteors.size(); i++)
+        meteors.at(i)->draw();
+}
+bool Stages::check_colission(){
+    
+   for(std::size_t i{0}; i<meteors.size() -2; i+=2)
+       for(std::size_t j{1}; j<meteors.size() -1; j+=2)
+            if(!Engine::player->check_collision(meteors.at(i)) && !Engine::player->check_collision(meteors.at(j)))
+                return true;
+            else
+                return false;
+}
+void Stages::reset_level(){
+    for(std::size_t i{0}; i<meteors.size(); i++)
+         meteors.at(i)->destRect = {m_destRect.at(i).x,m_destRect.at(i).y,m_destRect.at(i).h,m_destRect.at(i).w};
+         Engine::player->clear();
     
 }
+
+//void Stages::freeze(){
+//    
+//    for(std::size_t i{0}; i<meteors.size(); i++)
+//        meteors.at(i)->destRect = {m_destRect.at(i).x,m_destRect.at(i).y, m_destRect.at(i).h, m_destRect.at(i).w};
+//        
+//}
