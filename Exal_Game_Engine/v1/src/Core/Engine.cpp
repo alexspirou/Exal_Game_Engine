@@ -47,7 +47,7 @@ void Engine::render()
     if(!levels->is_gameover())
     {
     SDL_RenderClear(m_renderer);
-    
+     player->freeze = false;
     texManager.draw("backround", 0, 0, 1000, 1000);
     texManager.draw("energy", 80, 100, 50, 50);
     texManager.draw("energy", 80, 550 ,50, 50);
@@ -64,18 +64,15 @@ void Engine::render()
     levels->set_gameover(true);
         if(levels->is_gameover()){
             SDL_RenderClear(m_renderer);
+            player->freeze = true;
             texManager.draw("backround", 0, 0, 1000, 1000);
             texManager.draw("gameover", 250, 50, 528/2, 528/2);
             texManager.draw("again", 0, 300, 800, 100);
-            event();
+            
             SDL_RenderPresent(m_renderer);
+            event();
             }
     }
-          
-    
-    
-    
-    
     SDL_Delay(5);
     SDL_RenderPresent(m_renderer);
     }
@@ -92,9 +89,20 @@ void Engine::event()
             break;
         case SDL_KEYDOWN:
             if (event.key.keysym.sym == SDLK_F2)
+               
                 levels->reset_level();
                 levels->set_gameover(false);
-                
+            if (event.key.keysym.sym == SDLK_F3){
+                levels->reset_level();
+                levels->level_2();
+                levels->set_b_level_1(false);
+            }
+            if (event.key.keysym.sym == SDLK_F4){
+                levels->reset_level();
+                levels->level_1();
+                levels->set_b_level_2(false);
+            }
+            
             break;
     }
     

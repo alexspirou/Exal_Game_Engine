@@ -21,23 +21,25 @@ void Mage::draw()
 void Mage::events()
 {
     SDL_Event event;
-    SDL_PollEvent(&event);    
+    SDL_PollEvent(&event); 
     switch (event.type)
     {
         case SDL_KEYDOWN:
     
-    {   
+    {
+    if(!freeze){
         if (event.key.keysym.sym == SDLK_RIGHT)
-            destRect.x += 8.1;
+            destRect.x += 12;
             
         if (event.key.keysym.sym == SDLK_LEFT)
-            destRect.x -= 8;
+            destRect.x -= 12;
         if (event.key.keysym.sym == SDLK_UP)
-            destRect.y -= 8;
+            destRect.y -= 12;
 
         if (event.key.keysym.sym == SDLK_DOWN)
-            destRect.y += 8;
+            destRect.y += 12;
     
+            }
         }
     }
 }
@@ -45,16 +47,16 @@ bool Mage::check_collision(Meteors *p)
 {
    
     if (SDL_HasIntersection(&destRect, &p->destRect))
-    {
-    return true;
-    }else {return false;}
+        return true;
+    else 
+        return false;
 }
 void Mage::clean()
 {
    texManager.clean();
 }
-void Mage::clear()
-{
+void Mage::clear(){
        destRect = {50, 200, 60, 50};
 }
+
 

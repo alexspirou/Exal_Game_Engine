@@ -14,6 +14,7 @@ public:
     void events();
     bool check_collision(Meteors *obj);
     void clear();
+    bool freeze = false;
 private:
     SDL_Rect srcRect, destRect;
     TextureManager texManager;
