@@ -5,7 +5,7 @@ Mage::Mage()
 {
 
     texManager.load("player","src/assets/character.png");
-    
+    texManager.load("explosion","src/assets/explosion.png");
     destRect.x = 50;
     destRect.y = 200;
     destRect.w = 60;
@@ -16,6 +16,11 @@ void Mage::draw()
     
     texManager.draw("player", destRect.x, destRect.y, destRect.w, destRect.h);
     
+}
+void Mage::draw_explosion(){
+    
+    texManager.draw("explosion", destRect.x, destRect.y, destRect.w, destRect.h);
+
 }
 
 void Mage::events()
@@ -44,6 +49,14 @@ void Mage::events()
     }
 }
 bool Mage::check_collision(Meteors *p)
+{
+   
+    if (SDL_HasIntersection(&destRect, &p->destRect))
+        return true;
+    else 
+        return false;
+}
+bool Mage::check_collision(Energy *p)
 {
    
     if (SDL_HasIntersection(&destRect, &p->destRect))

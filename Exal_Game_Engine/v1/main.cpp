@@ -1,7 +1,5 @@
 #include "SDL2/SDL.h"
 #include <SDL2/SDL_image.h>
-#include "src/Object/IObject.h"
-#include "src/Object/GameObject.h"
 #include "src/Core/Engine.h"
 #include <iostream>
 #include "src/Physics/Vector2D.h"

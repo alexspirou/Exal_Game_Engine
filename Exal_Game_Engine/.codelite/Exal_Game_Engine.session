@@ -1,110 +1,82 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Session Name="/home/alex/Dropbox/Alex/Programming/Programming_Tutorials/Exal/Exal_Game_Engine/Exal_Game_Engine/Exal_Game_Engine.workspace">
-  <int Value="1" Name="m_selectedTab"/>
+  <int Value="9" Name="m_selectedTab"/>
   <wxString Value="/home/alex/Dropbox/Alex/Programming/Programming_Tutorials/Exal/Exal_Game_Engine/Exal_Game_Engine/Exal_Game_Engine.workspace" Name="m_workspaceName"/>
   <TabInfoArray Name="TabInfoArray">
     <TabInfo>
       <wxString Value="/usr/include/c++/7/ext/aligned_buffer.h" Name="FileName"/>
-      <int Value="38" Name="FirstVisibleLine"/>
+      <int Value="37" Name="FirstVisibleLine"/>
       <int Value="39" Name="CurrentLine"/>
       <wxArrayString Name="Bookmarks"/>
       <IntVector Name="CollapsedFolds"/>
     </TabInfo>
     <TabInfo>
       <wxString Value="/home/alex/Dropbox/Alex/Programming/Programming_Tutorials/Exal/Exal_Game_Engine/Exal_Game_Engine/v1/src/Core/Engine.cpp" Name="FileName"/>
-      <int Value="54" Name="FirstVisibleLine"/>
-      <int Value="89" Name="CurrentLine"/>
-      <wxArrayString Name="Bookmarks"/>
-      <IntVector Name="CollapsedFolds"/>
-    </TabInfo>
-    <TabInfo>
-      <wxString Value="/home/alex/Dropbox/Alex/Programming/Programming_Tutorials/Exal/Exal_Game_Engine/Exal_Game_Engine/v1/src/Characters/Enemy.h" Name="FileName"/>
-      <int Value="18" Name="FirstVisibleLine"/>
-      <int Value="20" Name="CurrentLine"/>
+      <int Value="56" Name="FirstVisibleLine"/>
+      <int Value="58" Name="CurrentLine"/>
       <wxArrayString Name="Bookmarks"/>
       <IntVector Name="CollapsedFolds"/>
     </TabInfo>
     <TabInfo>
       <wxString Value="/home/alex/Dropbox/Alex/Programming/Programming_Tutorials/Exal/Exal_Game_Engine/Exal_Game_Engine/v1/src/Characters/Mage.cpp" Name="FileName"/>
-      <int Value="0" Name="FirstVisibleLine"/>
-      <int Value="31" Name="CurrentLine"/>
+      <int Value="59" Name="FirstVisibleLine"/>
+      <int Value="61" Name="CurrentLine"/>
       <wxArrayString Name="Bookmarks"/>
       <IntVector Name="CollapsedFolds"/>
     </TabInfo>
     <TabInfo>
       <wxString Value="/home/alex/Dropbox/Alex/Programming/Programming_Tutorials/Exal/Exal_Game_Engine/Exal_Game_Engine/v1/src/Characters/Mage.h" Name="FileName"/>
-      <int Value="13" Name="FirstVisibleLine"/>
-      <int Value="16" Name="CurrentLine"/>
+      <int Value="4" Name="FirstVisibleLine"/>
+      <int Value="5" Name="CurrentLine"/>
       <wxArrayString Name="Bookmarks"/>
       <IntVector Name="CollapsedFolds"/>
     </TabInfo>
     <TabInfo>
       <wxString Value="/home/alex/Dropbox/Alex/Programming/Programming_Tutorials/Exal/Exal_Game_Engine/Exal_Game_Engine/v1/src/Characters/Meteors.h" Name="FileName"/>
-      <int Value="12" Name="FirstVisibleLine"/>
-      <int Value="11" Name="CurrentLine"/>
+      <int Value="4" Name="FirstVisibleLine"/>
+      <int Value="6" Name="CurrentLine"/>
       <wxArrayString Name="Bookmarks"/>
       <IntVector Name="CollapsedFolds"/>
     </TabInfo>
     <TabInfo>
       <wxString Value="/home/alex/Dropbox/Alex/Programming/Programming_Tutorials/Exal/Exal_Game_Engine/Exal_Game_Engine/v1/src/Characters/Meteors.cpp" Name="FileName"/>
-      <int Value="14" Name="FirstVisibleLine"/>
+      <int Value="15" Name="FirstVisibleLine"/>
       <int Value="17" Name="CurrentLine"/>
       <wxArrayString Name="Bookmarks"/>
       <IntVector Name="CollapsedFolds"/>
     </TabInfo>
     <TabInfo>
       <wxString Value="/home/alex/Dropbox/Alex/Programming/Programming_Tutorials/Exal/Exal_Game_Engine/Exal_Game_Engine/v1/src/Levels/Stages.cpp" Name="FileName"/>
-      <int Value="56" Name="FirstVisibleLine"/>
-      <int Value="81" Name="CurrentLine"/>
+      <int Value="116" Name="FirstVisibleLine"/>
+      <int Value="118" Name="CurrentLine"/>
       <wxArrayString Name="Bookmarks"/>
       <IntVector Name="CollapsedFolds"/>
     </TabInfo>
     <TabInfo>
       <wxString Value="/home/alex/Dropbox/Alex/Programming/Programming_Tutorials/Exal/Exal_Game_Engine/Exal_Game_Engine/v1/src/Graphics/TextureManager.cpp" Name="FileName"/>
-      <int Value="0" Name="FirstVisibleLine"/>
+      <int Value="36" Name="FirstVisibleLine"/>
       <int Value="38" Name="CurrentLine"/>
       <wxArrayString Name="Bookmarks"/>
       <IntVector Name="CollapsedFolds"/>
     </TabInfo>
     <TabInfo>
-      <wxString Value="/home/alex/Dropbox/Alex/Programming/Programming_Tutorials/Exal/Exal_Game_Engine/Exal_Game_Engine/v1/src/Characters/Character.h" Name="FileName"/>
-      <int Value="18" Name="FirstVisibleLine"/>
-      <int Value="20" Name="CurrentLine"/>
-      <wxArrayString Name="Bookmarks"/>
-      <IntVector Name="CollapsedFolds"/>
-    </TabInfo>
-    <TabInfo>
       <wxString Value="/home/alex/Dropbox/Alex/Programming/Programming_Tutorials/Exal/Exal_Game_Engine/Exal_Game_Engine/v1/src/Levels/Stages.h" Name="FileName"/>
-      <int Value="0" Name="FirstVisibleLine"/>
-      <int Value="25" Name="CurrentLine"/>
+      <int Value="16" Name="FirstVisibleLine"/>
+      <int Value="18" Name="CurrentLine"/>
       <wxArrayString Name="Bookmarks"/>
       <IntVector Name="CollapsedFolds"/>
     </TabInfo>
     <TabInfo>
       <wxString Value="/home/alex/Dropbox/Alex/Programming/Programming_Tutorials/Exal/Exal_Game_Engine/Exal_Game_Engine/v1/src/Core/Engine.h" Name="FileName"/>
-      <int Value="1" Name="FirstVisibleLine"/>
-      <int Value="4" Name="CurrentLine"/>
+      <int Value="9" Name="FirstVisibleLine"/>
+      <int Value="10" Name="CurrentLine"/>
       <wxArrayString Name="Bookmarks"/>
       <IntVector Name="CollapsedFolds"/>
     </TabInfo>
     <TabInfo>
       <wxString Value="/home/alex/Dropbox/Alex/Programming/Programming_Tutorials/Exal/Exal_Game_Engine/Exal_Game_Engine/v1/main.cpp" Name="FileName"/>
-      <int Value="28" Name="FirstVisibleLine"/>
-      <int Value="30" Name="CurrentLine"/>
-      <wxArrayString Name="Bookmarks"/>
-      <IntVector Name="CollapsedFolds"/>
-    </TabInfo>
-    <TabInfo>
-      <wxString Value="/home/alex/Dropbox/Alex/Programming/Programming_Tutorials/Exal/Exal_Game_Engine/Exal_Game_Engine/v1/src/Object/GameObject.h" Name="FileName"/>
-      <int Value="14" Name="FirstVisibleLine"/>
-      <int Value="17" Name="CurrentLine"/>
-      <wxArrayString Name="Bookmarks"/>
-      <IntVector Name="CollapsedFolds"/>
-    </TabInfo>
-    <TabInfo>
-      <wxString Value="/home/alex/Dropbox/Alex/Programming/Programming_Tutorials/Exal/Exal_Game_Engine/Exal_Game_Engine/v1/src/Object/IObject.h" Name="FileName"/>
-      <int Value="0" Name="FirstVisibleLine"/>
-      <int Value="0" Name="CurrentLine"/>
+      <int Value="6" Name="FirstVisibleLine"/>
+      <int Value="8" Name="CurrentLine"/>
       <wxArrayString Name="Bookmarks"/>
       <IntVector Name="CollapsedFolds"/>
     </TabInfo>
@@ -112,6 +84,27 @@
       <wxString Value="/home/alex/Dropbox/Alex/Programming/Programming_Tutorials/Exal/Exal_Game_Engine/Exal_Game_Engine/v1/src/Graphics/TextureManager.h" Name="FileName"/>
       <int Value="0" Name="FirstVisibleLine"/>
       <int Value="0" Name="CurrentLine"/>
+      <wxArrayString Name="Bookmarks"/>
+      <IntVector Name="CollapsedFolds"/>
+    </TabInfo>
+    <TabInfo>
+      <wxString Value="/home/alex/Dropbox/Alex/Programming/Programming_Tutorials/Exal/Exal_Game_Engine/Exal_Game_Engine/v1/src/Characters/Energy.h" Name="FileName"/>
+      <int Value="14" Name="FirstVisibleLine"/>
+      <int Value="16" Name="CurrentLine"/>
+      <wxArrayString Name="Bookmarks"/>
+      <IntVector Name="CollapsedFolds"/>
+    </TabInfo>
+    <TabInfo>
+      <wxString Value="/home/alex/Dropbox/Alex/Programming/Programming_Tutorials/Exal/Exal_Game_Engine/Exal_Game_Engine/v1/src/Characters/Energy.cpp" Name="FileName"/>
+      <int Value="5" Name="FirstVisibleLine"/>
+      <int Value="7" Name="CurrentLine"/>
+      <wxArrayString Name="Bookmarks"/>
+      <IntVector Name="CollapsedFolds"/>
+    </TabInfo>
+    <TabInfo>
+      <wxString Value="/home/alex/Dropbox/Alex/Programming/Programming_Tutorials/Exal/Exal_Game_Engine/Exal_Game_Engine/v1/src/Characters/IObject.h" Name="FileName"/>
+      <int Value="7" Name="FirstVisibleLine"/>
+      <int Value="9" Name="CurrentLine"/>
       <wxArrayString Name="Bookmarks"/>
       <IntVector Name="CollapsedFolds"/>
     </TabInfo>
@@ -130,7 +123,7 @@
       <bool Value="0" Name="regex"/>
       <bool Value="0" Name="is_temp"/>
       <bool Value="1" Name="is_enabled"/>
-      <long Value="0" Name="ignore_number"/>
+      <int Value="0" Name="ignore_number"/>
       <wxString Value="" Name="conditions"/>
       <int Value="0" Name="origin"/>
     </SerializedObject>
@@ -146,7 +139,7 @@
       <bool Value="0" Name="regex"/>
       <bool Value="0" Name="is_temp"/>
       <bool Value="1" Name="is_enabled"/>
-      <long Value="0" Name="ignore_number"/>
+      <int Value="0" Name="ignore_number"/>
       <wxString Value="" Name="conditions"/>
       <int Value="0" Name="origin"/>
     </SerializedObject>
@@ -162,7 +155,7 @@
       <bool Value="0" Name="regex"/>
       <bool Value="0" Name="is_temp"/>
       <bool Value="1" Name="is_enabled"/>
-      <long Value="0" Name="ignore_number"/>
+      <int Value="0" Name="ignore_number"/>
       <wxString Value="" Name="conditions"/>
       <int Value="0" Name="origin"/>
     </SerializedObject>
@@ -178,7 +171,7 @@
       <bool Value="0" Name="regex"/>
       <bool Value="0" Name="is_temp"/>
       <bool Value="1" Name="is_enabled"/>
-      <long Value="0" Name="ignore_number"/>
+      <int Value="0" Name="ignore_number"/>
       <wxString Value="" Name="conditions"/>
       <int Value="0" Name="origin"/>
     </SerializedObject>
@@ -194,7 +187,7 @@
       <bool Value="0" Name="regex"/>
       <bool Value="0" Name="is_temp"/>
       <bool Value="1" Name="is_enabled"/>
-      <long Value="0" Name="ignore_number"/>
+      <int Value="0" Name="ignore_number"/>
       <wxString Value="" Name="conditions"/>
       <int Value="0" Name="origin"/>
     </SerializedObject>
@@ -210,7 +203,7 @@
       <bool Value="0" Name="regex"/>
       <bool Value="0" Name="is_temp"/>
       <bool Value="1" Name="is_enabled"/>
-      <long Value="0" Name="ignore_number"/>
+      <int Value="0" Name="ignore_number"/>
       <wxString Value="" Name="conditions"/>
       <int Value="0" Name="origin"/>
     </SerializedObject>
@@ -226,7 +219,7 @@
       <bool Value="0" Name="regex"/>
       <bool Value="0" Name="is_temp"/>
       <bool Value="1" Name="is_enabled"/>
-      <long Value="0" Name="ignore_number"/>
+      <int Value="0" Name="ignore_number"/>
       <wxString Value="" Name="conditions"/>
       <int Value="0" Name="origin"/>
     </SerializedObject>
@@ -242,7 +235,7 @@
       <bool Value="0" Name="regex"/>
       <bool Value="0" Name="is_temp"/>
       <bool Value="1" Name="is_enabled"/>
-      <long Value="0" Name="ignore_number"/>
+      <int Value="0" Name="ignore_number"/>
       <wxString Value="" Name="conditions"/>
       <int Value="0" Name="origin"/>
     </SerializedObject>
@@ -258,7 +251,7 @@
       <bool Value="0" Name="regex"/>
       <bool Value="0" Name="is_temp"/>
       <bool Value="1" Name="is_enabled"/>
-      <long Value="0" Name="ignore_number"/>
+      <int Value="0" Name="ignore_number"/>
       <wxString Value="" Name="conditions"/>
       <int Value="0" Name="origin"/>
     </SerializedObject>
@@ -274,7 +267,7 @@
       <bool Value="0" Name="regex"/>
       <bool Value="0" Name="is_temp"/>
       <bool Value="1" Name="is_enabled"/>
-      <long Value="0" Name="ignore_number"/>
+      <int Value="0" Name="ignore_number"/>
       <wxString Value="" Name="conditions"/>
       <int Value="0" Name="origin"/>
     </SerializedObject>
@@ -290,7 +283,7 @@
       <bool Value="0" Name="regex"/>
       <bool Value="0" Name="is_temp"/>
       <bool Value="1" Name="is_enabled"/>
-      <long Value="0" Name="ignore_number"/>
+      <int Value="0" Name="ignore_number"/>
       <wxString Value="" Name="conditions"/>
       <int Value="0" Name="origin"/>
     </SerializedObject>
@@ -306,7 +299,7 @@
       <bool Value="0" Name="regex"/>
       <bool Value="0" Name="is_temp"/>
       <bool Value="1" Name="is_enabled"/>
-      <long Value="0" Name="ignore_number"/>
+      <int Value="0" Name="ignore_number"/>
       <wxString Value="" Name="conditions"/>
       <int Value="0" Name="origin"/>
     </SerializedObject>
@@ -322,7 +315,7 @@
       <bool Value="0" Name="regex"/>
       <bool Value="0" Name="is_temp"/>
       <bool Value="1" Name="is_enabled"/>
-      <long Value="0" Name="ignore_number"/>
+      <int Value="0" Name="ignore_number"/>
       <wxString Value="" Name="conditions"/>
       <int Value="0" Name="origin"/>
     </SerializedObject>
@@ -338,7 +331,7 @@
       <bool Value="0" Name="regex"/>
       <bool Value="0" Name="is_temp"/>
       <bool Value="1" Name="is_enabled"/>
-      <long Value="0" Name="ignore_number"/>
+      <int Value="0" Name="ignore_number"/>
       <wxString Value="" Name="conditions"/>
       <int Value="0" Name="origin"/>
     </SerializedObject>
@@ -354,7 +347,7 @@
       <bool Value="0" Name="regex"/>
       <bool Value="0" Name="is_temp"/>
       <bool Value="1" Name="is_enabled"/>
-      <long Value="0" Name="ignore_number"/>
+      <int Value="0" Name="ignore_number"/>
       <wxString Value="" Name="conditions"/>
       <int Value="0" Name="origin"/>
     </SerializedObject>
@@ -370,7 +363,7 @@
       <bool Value="0" Name="regex"/>
       <bool Value="0" Name="is_temp"/>
       <bool Value="1" Name="is_enabled"/>
-      <long Value="0" Name="ignore_number"/>
+      <int Value="0" Name="ignore_number"/>
       <wxString Value="" Name="conditions"/>
       <int Value="0" Name="origin"/>
     </SerializedObject>

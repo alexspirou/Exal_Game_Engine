@@ -1,6 +1,6 @@
 #include "Meteors.h"
 
-Meteors::Meteors(int x, int y, int w, int h)
+Meteors::Meteors(int x, int y, int w, int h) : IObject()
 {
     texManager.load("meteor", "src/assets/meteor.png");
     destRect.x = x;

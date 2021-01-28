@@ -8,16 +8,13 @@
       <File Name="src/Levels/Stages.h"/>
     </VirtualDirectory>
     <VirtualDirectory Name="Characters">
-      <File Name="src/Characters/Enemy.h"/>
+      <File Name="src/Characters/IObject.h"/>
+      <File Name="src/Characters/Energy.cpp"/>
+      <File Name="src/Characters/Energy.h"/>
       <File Name="src/Characters/Meteors.cpp"/>
       <File Name="src/Characters/Meteors.h"/>
-      <File Name="src/Characters/Character.h"/>
       <File Name="src/Characters/Mage.cpp"/>
       <File Name="src/Characters/Mage.h"/>
-    </VirtualDirectory>
-    <VirtualDirectory Name="Object">
-      <File Name="src/Object/GameObject.h"/>
-      <File Name="src/Object/IObject.h"/>
     </VirtualDirectory>
     <VirtualDirectory Name="Physics">
       <File Name="src/Physics/Transform.h"/>

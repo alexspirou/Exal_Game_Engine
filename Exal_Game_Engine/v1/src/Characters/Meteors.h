@@ -1,11 +1,11 @@
 #ifndef METEORS_H
 #define METEORS_H
-#include "src/Characters/Enemy.h"
 #include "src/Graphics/TextureManager.h"
 #include "src/Physics/Transform.h"
 #include  "vector"
 #include "src/Physics/Vector2D.h"
-class Meteors
+#include "IObject.h"
+class Meteors : public  IObject
 {
 public:
     Meteors(int x, int y, int w, int h);
