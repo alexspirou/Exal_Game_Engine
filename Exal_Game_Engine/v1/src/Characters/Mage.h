@@ -17,6 +17,8 @@ public:
     void clear();
     bool freeze = false;
     void draw_explosion();
+    inline SDL_Rect get_rect(){return destRect;}
+    inline void set_rect(SDL_Rect f_rect){ destRect = f_rect;}
 private:
     SDL_Rect srcRect, destRect;
     TextureManager texManager;

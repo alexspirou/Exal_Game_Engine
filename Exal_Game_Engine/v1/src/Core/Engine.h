@@ -7,6 +7,7 @@
 #include "src/Characters/Mage.h"
 #include "src/Characters/Meteors.h"
 #include "src/Graphics/TextureManager.h"
+#include "src/Levels/Menu.h"
 
 #define SCREEN_WIDTH 640
 #define SCREEN_HEIGHT 800
@@ -15,13 +16,14 @@ class Engine
 {
 public:
     Engine() {}
-    ~Engine() {delete player; delete levels;}
+    ~Engine() {delete [] player; delete []levels;}
     bool init(); //Whent the program starts create the need staff
     bool clean(); //Clean surfaces, renderers etc
     void update(); // Update events renders etc
     void render(); // Render all graphics
     void event(); //Handle the user's inputs
     void quit(); // Quit program, destroy what it needs to be destroyed
+    void start_menu();
     //getters
     inline Mage* get_player(){return player;}
     //booleans
@@ -34,10 +36,10 @@ public:
 private:
     SDL_Window* m_window;
     bool m_isRunning;
-   
     SDL_bool collision;
     Stages* levels = nullptr;
     TextureManager texManager;
+    Menu* menu = nullptr;
 
 
 };

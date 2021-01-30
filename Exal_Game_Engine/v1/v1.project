@@ -4,6 +4,8 @@
   <Dependencies/>
   <VirtualDirectory Name="src">
     <VirtualDirectory Name="Levels">
+      <File Name="src/Levels/Menu.cpp"/>
+      <File Name="src/Levels/Menu.h"/>
       <File Name="src/Levels/Stages.cpp"/>
       <File Name="src/Levels/Stages.h"/>
     </VirtualDirectory>

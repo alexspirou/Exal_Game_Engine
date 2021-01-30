@@ -14,6 +14,7 @@ int main(int argc, char **argv)
     Engine* engine = nullptr;
     engine = new Engine;
     engine->init();
+    engine->start_menu();
     while (engine->isRunning())
     {
 
@@ -26,7 +27,7 @@ int main(int argc, char **argv)
      
     }
     engine->clean();
-    delete engine;
+    delete [] engine;
    
 	return 0;
 }

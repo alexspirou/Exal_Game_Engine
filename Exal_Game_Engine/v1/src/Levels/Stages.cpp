@@ -9,7 +9,11 @@ Stages::Stages()
     texManager.load("1", "src/assets/1.png");
     texManager.load("2", "src/assets/2.png");
     texManager.load("3", "src/assets/3.png");
-    texManager.load("4", "src/assets/4.png");  
+    texManager.load("4", "src/assets/4.png");
+    texManager.load("level_1", "src/assets/level_1.png");
+    texManager.load("level_2", "src/assets/level_2.png");    
+    texManager.load("level_1_upleft", "src/assets/level_1_upleft.png");  
+    texManager.load("level_2_upleft", "src/assets/level_2_upleft.png");
     //Meteors init
     meteors.resize(12, nullptr);
     m_destRect.resize(12);
@@ -26,13 +30,21 @@ Stages::Stages()
 
 Stages::~Stages()
 {
-    delete [] &meteors;
-    delete [] &energies;
+    for(auto p: meteors)
+        delete [] p;
+    for (auto p: energies)
+        delete [] p;
 }
 void Stages::level_1(){
         //Meteors
         b_level_1 = true;
         std::cout << "---LEVEL1---" << std::endl;
+        for(size_t i{0}; i < 5; i++){
+            SDL_RenderClear(Engine::m_renderer);
+            texManager.draw("level_1", 0, 0, 800, 800);
+            SDL_RenderPresent(Engine::m_renderer);            
+            SDL_Delay(250);
+        }
         meteors.at(0)->destRect =  {1200, 300, 100, 100};
         meteors.at(1)->destRect = {1400, 50, 100, 100};
         meteors.at(2)->destRect = {1600, 250, 50 ,50};
@@ -47,6 +59,7 @@ void Stages::level_1(){
         //store init pos for reset the level
         for(std::size_t i{0}; i<meteors.size(); i++)
             m_destRect.at(i) = meteors.at(i) ->destRect;
+
         //Energies
         energies.at(0)->destRect = {150, 50, 60, 60};
         energies.at(1)->destRect = {150, 500, 60, 60};
@@ -55,12 +68,18 @@ void Stages::level_1(){
         //store init pos for reset the level
         for(std::size_t i{0}; i<energies.size();  i++)
                 e_destRect.at(i) =  energies.at(i)->destRect;
-}       
+}               
 
 
 void Stages::level_2(){
 //level2
         b_level_2 = true;
+        for(size_t i{0}; i < 5; i++){
+            SDL_RenderClear(Engine::m_renderer);
+            texManager.draw("level_2", 0, 0, 800, 800);
+            SDL_RenderPresent(Engine::m_renderer);            
+            SDL_Delay(250);
+        }        
         std::cout << "---LEVEL2---" << std::endl;
         meteors.at(0)->destRect =  {1800, 300, 100, 100};
         meteors.at(1)->destRect = {1100, 50, 50, 50};
@@ -97,6 +116,11 @@ void Stages::render(){
     //energies
     for(std::size_t i{0}; i<energies.size(); i++)
         energies.at(i)->draw();
+        if(b_level_1)
+            texManager.draw("level_1_upleft", 0, 0, 800, 800);
+        if(b_level_2)
+            texManager.draw("level_2_upleft", 0, 0, 800, 800);
+
     //meteors
     for(std::size_t i{0}; i<meteors.size(); i++)
         meteors.at(i)->draw();

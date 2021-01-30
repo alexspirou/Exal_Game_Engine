@@ -30,20 +30,20 @@ void Mage::events()
     switch (event.type)
     {
         case SDL_KEYDOWN:
-    
-    {
-    if(!freeze){
-        if (event.key.keysym.sym == SDLK_RIGHT)
-            destRect.x += 12;
-            
-        if (event.key.keysym.sym == SDLK_LEFT)
-            destRect.x -= 12;
-        if (event.key.keysym.sym == SDLK_UP)
-            destRect.y -= 12;
+        {
+        if(!freeze){
+            if (event.key.keysym.sym == SDLK_RIGHT)
+                destRect.x += 12;
+                
+            if (event.key.keysym.sym == SDLK_LEFT)
+                destRect.x -= 12;
+                
+            if (event.key.keysym.sym == SDLK_UP)
+                destRect.y -= 12;
 
-        if (event.key.keysym.sym == SDLK_DOWN)
-            destRect.y += 12;
-    
+            if (event.key.keysym.sym == SDLK_DOWN)
+                destRect.y += 12;
+        
             }
         }
     }

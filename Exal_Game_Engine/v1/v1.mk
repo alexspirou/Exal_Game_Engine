@@ -13,10 +13,10 @@ CurrentFileName        :=
 CurrentFilePath        :=
 CurrentFileFullPath    :=
 User                   :=alex
-Date                   :=28/01/21
+Date                   :=30/01/21
 CodeLitePath           :=/home/alex/.codelite
-LinkerName             :=/usr/bin/g++
-SharedObjectLinkerName :=/usr/bin/g++ -shared -fPIC
+LinkerName             :=/usr/bin/g++-7
+SharedObjectLinkerName :=/usr/bin/g++-7 -shared -fPIC
 ObjectSuffix           :=.o
 DependSuffix           :=.o.d
 PreprocessSuffix       :=.i
@@ -48,8 +48,8 @@ LibPath                := $(LibraryPathSwitch).
 ## AR, CXX, CC, AS, CXXFLAGS and CFLAGS can be overriden using an environment variables
 ##
 AR       := /usr/bin/ar rcu
-CXX      := /usr/bin/g++
-CC       := /usr/bin/gcc
+CXX      := /usr/bin/g++-7
+CC       := /usr/bin/gcc-7
 CXXFLAGS :=  -g -O0 -std=c++17 -Wall $(Preprocessors)
 CFLAGS   :=  -g -O0 -Wall $(Preprocessors)
 ASFLAGS  := 
@@ -60,7 +60,7 @@ AS       := /usr/bin/as
 ## User defined environment variables
 ##
 CodeLiteDir:=/usr/share/codelite
-Objects0=$(IntermediateDirectory)/src_Graphics_TextureManager.cpp$(ObjectSuffix) $(IntermediateDirectory)/src_Characters_Mage.cpp$(ObjectSuffix) $(IntermediateDirectory)/src_Levels_Stages.cpp$(ObjectSuffix) $(IntermediateDirectory)/main.cpp$(ObjectSuffix) $(IntermediateDirectory)/src_Characters_Meteors.cpp$(ObjectSuffix) $(IntermediateDirectory)/src_Characters_Energy.cpp$(ObjectSuffix) $(IntermediateDirectory)/src_Core_Engine.cpp$(ObjectSuffix) 
+Objects0=$(IntermediateDirectory)/src_Core_Engine.cpp$(ObjectSuffix) $(IntermediateDirectory)/src_Levels_Stages.cpp$(ObjectSuffix) $(IntermediateDirectory)/main.cpp$(ObjectSuffix) $(IntermediateDirectory)/src_Levels_Menu.cpp$(ObjectSuffix) $(IntermediateDirectory)/src_Characters_Energy.cpp$(ObjectSuffix) $(IntermediateDirectory)/src_Characters_Mage.cpp$(ObjectSuffix) $(IntermediateDirectory)/src_Characters_Meteors.cpp$(ObjectSuffix) $(IntermediateDirectory)/src_Graphics_TextureManager.cpp$(ObjectSuffix) 
 
 
 
@@ -91,17 +91,11 @@ PreBuild:
 ##
 ## Objects
 ##
-$(IntermediateDirectory)/src_Graphics_TextureManager.cpp$(ObjectSuffix): src/Graphics/TextureManager.cpp
-	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/src_Graphics_TextureManager.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/src_Graphics_TextureManager.cpp$(DependSuffix) -MM src/Graphics/TextureManager.cpp
-	$(CXX) $(IncludePCH) $(SourceSwitch) "/home/alex/Dropbox/Alex/Programming/Programming_Tutorials/Exal/Exal_Game_Engine/Exal_Game_Engine/v1/src/Graphics/TextureManager.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/src_Graphics_TextureManager.cpp$(ObjectSuffix) $(IncludePath)
-$(IntermediateDirectory)/src_Graphics_TextureManager.cpp$(PreprocessSuffix): src/Graphics/TextureManager.cpp
-	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/src_Graphics_TextureManager.cpp$(PreprocessSuffix) src/Graphics/TextureManager.cpp
-
-$(IntermediateDirectory)/src_Characters_Mage.cpp$(ObjectSuffix): src/Characters/Mage.cpp
-	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/src_Characters_Mage.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/src_Characters_Mage.cpp$(DependSuffix) -MM src/Characters/Mage.cpp
-	$(CXX) $(IncludePCH) $(SourceSwitch) "/home/alex/Dropbox/Alex/Programming/Programming_Tutorials/Exal/Exal_Game_Engine/Exal_Game_Engine/v1/src/Characters/Mage.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/src_Characters_Mage.cpp$(ObjectSuffix) $(IncludePath)
-$(IntermediateDirectory)/src_Characters_Mage.cpp$(PreprocessSuffix): src/Characters/Mage.cpp
-	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/src_Characters_Mage.cpp$(PreprocessSuffix) src/Characters/Mage.cpp
+$(IntermediateDirectory)/src_Core_Engine.cpp$(ObjectSuffix): src/Core/Engine.cpp
+	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/src_Core_Engine.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/src_Core_Engine.cpp$(DependSuffix) -MM src/Core/Engine.cpp
+	$(CXX) $(IncludePCH) $(SourceSwitch) "/home/alex/Dropbox/Alex/Programming/Programming_Tutorials/Exal/Exal_Game_Engine/Exal_Game_Engine/v1/src/Core/Engine.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/src_Core_Engine.cpp$(ObjectSuffix) $(IncludePath)
+$(IntermediateDirectory)/src_Core_Engine.cpp$(PreprocessSuffix): src/Core/Engine.cpp
+	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/src_Core_Engine.cpp$(PreprocessSuffix) src/Core/Engine.cpp
 
 $(IntermediateDirectory)/src_Levels_Stages.cpp$(ObjectSuffix): src/Levels/Stages.cpp
 	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/src_Levels_Stages.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/src_Levels_Stages.cpp$(DependSuffix) -MM src/Levels/Stages.cpp
@@ -115,11 +109,11 @@ $(IntermediateDirectory)/main.cpp$(ObjectSuffix): main.cpp
 $(IntermediateDirectory)/main.cpp$(PreprocessSuffix): main.cpp
 	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/main.cpp$(PreprocessSuffix) main.cpp
 
-$(IntermediateDirectory)/src_Characters_Meteors.cpp$(ObjectSuffix): src/Characters/Meteors.cpp
-	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/src_Characters_Meteors.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/src_Characters_Meteors.cpp$(DependSuffix) -MM src/Characters/Meteors.cpp
-	$(CXX) $(IncludePCH) $(SourceSwitch) "/home/alex/Dropbox/Alex/Programming/Programming_Tutorials/Exal/Exal_Game_Engine/Exal_Game_Engine/v1/src/Characters/Meteors.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/src_Characters_Meteors.cpp$(ObjectSuffix) $(IncludePath)
-$(IntermediateDirectory)/src_Characters_Meteors.cpp$(PreprocessSuffix): src/Characters/Meteors.cpp
-	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/src_Characters_Meteors.cpp$(PreprocessSuffix) src/Characters/Meteors.cpp
+$(IntermediateDirectory)/src_Levels_Menu.cpp$(ObjectSuffix): src/Levels/Menu.cpp
+	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/src_Levels_Menu.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/src_Levels_Menu.cpp$(DependSuffix) -MM src/Levels/Menu.cpp
+	$(CXX) $(IncludePCH) $(SourceSwitch) "/home/alex/Dropbox/Alex/Programming/Programming_Tutorials/Exal/Exal_Game_Engine/Exal_Game_Engine/v1/src/Levels/Menu.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/src_Levels_Menu.cpp$(ObjectSuffix) $(IncludePath)
+$(IntermediateDirectory)/src_Levels_Menu.cpp$(PreprocessSuffix): src/Levels/Menu.cpp
+	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/src_Levels_Menu.cpp$(PreprocessSuffix) src/Levels/Menu.cpp
 
 $(IntermediateDirectory)/src_Characters_Energy.cpp$(ObjectSuffix): src/Characters/Energy.cpp
 	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/src_Characters_Energy.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/src_Characters_Energy.cpp$(DependSuffix) -MM src/Characters/Energy.cpp
@@ -127,11 +121,23 @@ $(IntermediateDirectory)/src_Characters_Energy.cpp$(ObjectSuffix): src/Character
 $(IntermediateDirectory)/src_Characters_Energy.cpp$(PreprocessSuffix): src/Characters/Energy.cpp
 	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/src_Characters_Energy.cpp$(PreprocessSuffix) src/Characters/Energy.cpp
 
-$(IntermediateDirectory)/src_Core_Engine.cpp$(ObjectSuffix): src/Core/Engine.cpp
-	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/src_Core_Engine.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/src_Core_Engine.cpp$(DependSuffix) -MM src/Core/Engine.cpp
-	$(CXX) $(IncludePCH) $(SourceSwitch) "/home/alex/Dropbox/Alex/Programming/Programming_Tutorials/Exal/Exal_Game_Engine/Exal_Game_Engine/v1/src/Core/Engine.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/src_Core_Engine.cpp$(ObjectSuffix) $(IncludePath)
-$(IntermediateDirectory)/src_Core_Engine.cpp$(PreprocessSuffix): src/Core/Engine.cpp
-	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/src_Core_Engine.cpp$(PreprocessSuffix) src/Core/Engine.cpp
+$(IntermediateDirectory)/src_Characters_Mage.cpp$(ObjectSuffix): src/Characters/Mage.cpp
+	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/src_Characters_Mage.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/src_Characters_Mage.cpp$(DependSuffix) -MM src/Characters/Mage.cpp
+	$(CXX) $(IncludePCH) $(SourceSwitch) "/home/alex/Dropbox/Alex/Programming/Programming_Tutorials/Exal/Exal_Game_Engine/Exal_Game_Engine/v1/src/Characters/Mage.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/src_Characters_Mage.cpp$(ObjectSuffix) $(IncludePath)
+$(IntermediateDirectory)/src_Characters_Mage.cpp$(PreprocessSuffix): src/Characters/Mage.cpp
+	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/src_Characters_Mage.cpp$(PreprocessSuffix) src/Characters/Mage.cpp
+
+$(IntermediateDirectory)/src_Characters_Meteors.cpp$(ObjectSuffix): src/Characters/Meteors.cpp
+	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/src_Characters_Meteors.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/src_Characters_Meteors.cpp$(DependSuffix) -MM src/Characters/Meteors.cpp
+	$(CXX) $(IncludePCH) $(SourceSwitch) "/home/alex/Dropbox/Alex/Programming/Programming_Tutorials/Exal/Exal_Game_Engine/Exal_Game_Engine/v1/src/Characters/Meteors.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/src_Characters_Meteors.cpp$(ObjectSuffix) $(IncludePath)
+$(IntermediateDirectory)/src_Characters_Meteors.cpp$(PreprocessSuffix): src/Characters/Meteors.cpp
+	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/src_Characters_Meteors.cpp$(PreprocessSuffix) src/Characters/Meteors.cpp
+
+$(IntermediateDirectory)/src_Graphics_TextureManager.cpp$(ObjectSuffix): src/Graphics/TextureManager.cpp
+	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/src_Graphics_TextureManager.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/src_Graphics_TextureManager.cpp$(DependSuffix) -MM src/Graphics/TextureManager.cpp
+	$(CXX) $(IncludePCH) $(SourceSwitch) "/home/alex/Dropbox/Alex/Programming/Programming_Tutorials/Exal/Exal_Game_Engine/Exal_Game_Engine/v1/src/Graphics/TextureManager.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/src_Graphics_TextureManager.cpp$(ObjectSuffix) $(IncludePath)
+$(IntermediateDirectory)/src_Graphics_TextureManager.cpp$(PreprocessSuffix): src/Graphics/TextureManager.cpp
+	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/src_Graphics_TextureManager.cpp$(PreprocessSuffix) src/Graphics/TextureManager.cpp
 
 
 -include $(IntermediateDirectory)/*$(DependSuffix)

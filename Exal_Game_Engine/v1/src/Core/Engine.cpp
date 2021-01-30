@@ -27,17 +27,35 @@ bool Engine::init()
         SDL_Log("Fail to create renderer: %s", SDL_GetError());
     }
     
-    
+    menu = new Menu();
     player = new Mage();
     levels = new Stages();
     texManager.load("backround", "src/assets/backround3.png");
     texManager.load("gameover", "src/assets/game_over.png");
-    texManager.load("again", "src/assets/play_again.png");
-    texManager.load("energy", "src/assets/energy.png");
-  
-    levels->level_1();
+    texManager.load("again", "src/assets/play_again.png"); 
+    texManager.load("menu", "src/assets/start_menu.png");
+    
+
     return m_isRunning = true;
+  
+
 }
+
+void Engine::start_menu(){
+    SDL_RenderClear(m_renderer);
+    while(menu->get_menu()){
+        menu->render();
+        event();
+        if(!menu->get_menu()){
+            levels->level_1();
+            break;
+        }
+    SDL_RenderPresent(m_renderer);
+
+    }
+    
+}  
+
 
 void Engine::update(){
         
@@ -45,8 +63,12 @@ void Engine::update(){
 }
 void Engine::render()
 {   
-    if(!levels->is_gameover())
+
+    
+    if(!levels->is_gameover() && !menu->get_menu())
     {
+    if(levels->get_b_menu()){
+    }
     SDL_RenderClear(m_renderer);
     player->freeze = false;
     texManager.draw("backround", 0, 0, 1000, 1000);
@@ -77,6 +99,7 @@ void Engine::render()
 }   
 void Engine::event()
 {
+    menu->events();
     player->events();
     SDL_Event event;
     SDL_PollEvent(&event);    
@@ -112,9 +135,12 @@ bool Engine::clean()
     SDL_DestroyWindow(m_window);
     IMG_Quit();
     SDL_Quit();
+
 }
 void Engine::quit()
-{
+{   
+    menu->set_menu(false);
     levels->set_gameover(false);
     m_isRunning = false;
+    
 }
