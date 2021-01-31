@@ -5,15 +5,12 @@
 #include <algorithm>
 Stages::Stages()
 {   
-    texManager.load("counter", "src/assets/energies_left.png");
-    texManager.load("1", "src/assets/1.png");
-    texManager.load("2", "src/assets/2.png");
-    texManager.load("3", "src/assets/3.png");
-    texManager.load("4", "src/assets/4.png");
+    texManager.load("counter", "src/assets/Energies_counter.png");
     texManager.load("level_1", "src/assets/level_1.png");
     texManager.load("level_2", "src/assets/level_2.png");    
     texManager.load("level_1_upleft", "src/assets/level_1_upleft.png");  
     texManager.load("level_2_upleft", "src/assets/level_2_upleft.png");
+    texManager.load("energy", "src/assets/energy.png");
     //Meteors init
     meteors.resize(12, nullptr);
     m_destRect.resize(12);
@@ -141,7 +138,7 @@ void Stages::reset_level(){
         meteors.at(i)->destRect = {m_destRect.at(i).x,m_destRect.at(i).y,m_destRect.at(i).h,m_destRect.at(i).w};
         }
         Engine::player->clear();
-        energies_counter = 4;
+        energies_counter = 0;
     for(std::size_t i{0}; i<energies.size(); i++){
         energies.at(i)->destRect =  {e_destRect.at(i).x,e_destRect.at(i).y,e_destRect.at(i).h,e_destRect.at(i).w};
     }
@@ -152,38 +149,39 @@ bool Stages::check_colission_energies(){
     for(std::size_t i{0}; i<energies.size(); i++){
         if(Engine::player->check_collision(energies.at(i))){
             energies.at(i)->destRect = {0,0,0,0};
-            energies_counter --;
+            energies_counter ++;
 
         }
     }
 }
 
+
 void Stages::render_counter(){
-        texManager.draw("counter", 0, 500, 200, 200);
+        texManager.draw("counter", 0, -10, 650, 650);
 
         if(energies_counter == 1){
-                texManager.draw("1", 180, 460, 350, 250);
+                texManager.draw("energy", 140, 590, 40, 40);
                 texManager.draw("2", 0, 0, 0, 0);
                 texManager.draw("3", 0, 0, 0, 0);
                 texManager.draw("4", 0, 0, 0, 0);
         }
         else if(energies_counter== 2){
-                 texManager.draw("1", 0, 0, 0, 0);
-                texManager.draw("2", 180, 460, 350, 250);
+                texManager.draw("energy", 140, 590, 40, 40);
+                texManager.draw("energy", 180, 590, 40, 40);
                 texManager.draw("3", 0, 0, 0, 0);
                 texManager.draw("4", 0, 0, 0, 0);                       
         }
         else if(energies_counter == 3){
-                texManager.draw("1", 0, 0, 0, 0);
-                texManager.draw("2", 0, 0, 0, 0);            
-                texManager.draw("3", 180, 490, 350, 200);
+                texManager.draw("energy", 140, 590, 40, 40);
+                texManager.draw("energy", 180, 590, 40, 40);            
+                texManager.draw("energy", 220, 590, 40, 40);
                 texManager.draw("4", 0, 0, 0, 0);
         }
         else if(energies_counter == 4){
-                texManager.draw("1", 0, 0, 0, 0);
-                texManager.draw("2", 0, 0, 0, 0);
-                texManager.draw("3", 0, 0, 0, 0);
-                texManager.draw("4", 180, 460, 350, 250);
+                texManager.draw("energy", 140, 590, 40, 40);
+                texManager.draw("energy", 180, 590, 40, 40);            
+                texManager.draw("energy", 220, 590, 40, 40);
+                texManager.draw("energy", 260, 590, 40, 40);
         }
 
-}               
+}   

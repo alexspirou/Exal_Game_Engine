@@ -38,7 +38,7 @@ private:
     bool b_level_1 = false;
     bool b_level_2 = false;
     bool b_menu = true;
-    int energies_counter{4};
+    int energies_counter{0};
     TextureManager texManager;
    
 
