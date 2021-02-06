@@ -7,8 +7,6 @@
 #include "src/Graphics/TextureManager.h"
 
 
-
-
 int main(int argc, char **argv)
 {
     Engine* engine = nullptr;

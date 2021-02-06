@@ -33,16 +33,16 @@ void Mage::events()
         {
         if(!freeze){
             if (event.key.keysym.sym == SDLK_RIGHT)
-                destRect.x += 12;
+                destRect.x += 15;
                 
             if (event.key.keysym.sym == SDLK_LEFT)
-                destRect.x -= 12;
+                destRect.x -= 15;
                 
             if (event.key.keysym.sym == SDLK_UP)
-                destRect.y -= 12;
+                destRect.y -= 15;
 
             if (event.key.keysym.sym == SDLK_DOWN)
-                destRect.y += 12;
+                destRect.y += 15;
         
             }
         }

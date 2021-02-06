@@ -1,4 +1,5 @@
 #include "Meteors.h"
+#include <SDL2/SDL2_gfxPrimitives.h>
 
 Meteors::Meteors(int x, int y, int w, int h) : IObject()
 {

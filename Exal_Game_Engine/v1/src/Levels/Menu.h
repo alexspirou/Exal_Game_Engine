@@ -9,6 +9,7 @@ public:
     void update();
     void render();
     void events();
+    void diffuculty();
     inline bool get_menu(){return b_menu;}
     inline void set_menu(bool f_menu){b_menu = f_menu; }
 private:

@@ -29,7 +29,7 @@ bool Engine::init()
     texManager.load("gameover", "src/assets/game_over.png");
     texManager.load("again", "src/assets/play_again.png"); 
     texManager.load("menu", "src/assets/start_menu.png");
-    
+
     return m_isRunning = true;
 }
 void Engine::start_menu(){
@@ -52,12 +52,22 @@ void Engine::update(){
 }
 void Engine::render()
 {   
-    if(!levels->is_gameover() && !menu->get_menu()){
+//    if(!levels->is_gameover() && !menu->get_menu()){
         if(levels->get_b_menu()){
         }
             SDL_RenderClear(m_renderer);
             player->freeze = false;
-            texManager.draw("backround", 0, 0, 1000, 1000);
+            texManager.draw("backround", x, 0, 1200, 1000);
+            texManager.draw("backround", x2, 0, 1200, 1000);
+            x --;
+            x2 --;
+            if(x < -1200){
+                x = 0;
+            }
+            if(x2 <0){
+                x2 = 1200;
+            }
+
             levels->render(); 
             //While game is on
             if (!levels->check_colission_meteors()){
@@ -67,20 +77,23 @@ void Engine::render()
             //Gameover 
             }else{
                 levels->set_gameover(true);
-                if(levels->is_gameover()){
+                std::cout << "gameover = true " <<std::endl;
+                while(levels->is_gameover()){
+                    event();
                     SDL_RenderClear(m_renderer);
                     player->freeze = true;
                     texManager.draw("backround", 0, 0, 1000, 1000);
                     texManager.draw("gameover", 250, 50, 528/2, 528/2);
                     texManager.draw("again", 0, 300, 800, 100);
                     SDL_RenderPresent(m_renderer);
-                    event();
+                
+                    
                 }
         
             }
-            SDL_Delay(5);
+            SDL_Delay(10);
             SDL_RenderPresent(m_renderer);
-    }
+    //}
 }   
 void Engine::event()
 {
@@ -90,26 +103,40 @@ void Engine::event()
     SDL_PollEvent(&event);    
     switch (event.type)
     {
-        case SDL_QUIT:
+        case SDL_QUIT:{
             quit();
             break;
+            
+        }
         case SDL_KEYDOWN:
-            if (event.key.keysym.sym == SDLK_F2)
-               
+        {
+            if (event.key.keysym.sym == SDLK_F2){
                 levels->reset_level();
                 levels->set_gameover(false);
+                break;
+               
+               
+            }
             if (event.key.keysym.sym == SDLK_F3){
                 levels->reset_level();
                 levels->level_2();
                 levels->set_b_level_1(false);
+                levels->set_gameover(false);
+                break;
+                
             }
             if (event.key.keysym.sym == SDLK_F4){
                 levels->reset_level();
                 levels->level_1();
                 levels->set_b_level_2(false);
+                levels->set_gameover(false);
+                break;
             }
-            
+        }
+        default:
             break;
+            
+           break;  
     }
     
 }

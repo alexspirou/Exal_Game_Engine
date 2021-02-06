@@ -40,7 +40,7 @@ private:
     Stages* levels = nullptr;
     TextureManager texManager;
     Menu* menu = nullptr;
-
-
+    int x = 0;
+    int x2 = 1200;
 };
 #endif // _ENGINE_H_

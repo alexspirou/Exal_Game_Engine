@@ -1,8 +1,1 @@
-m_renderer	/home/alex/Dropbox/Alex/Programming/Programming_Tutorials/Exal/Exal_Game_Engine/Exal_Game_Engine/v1/src/Core/Engine.cpp	/^SDL_Renderer* Engine::m_renderer = nullptr;$/;"	member	line:3	class:Engine
-player	/home/alex/Dropbox/Alex/Programming/Programming_Tutorials/Exal/Exal_Game_Engine/Exal_Game_Engine/v1/src/Core/Engine.cpp	/^Mage* Engine::player = nullptr;$/;"	member	line:4	class:Engine
-init	/home/alex/Dropbox/Alex/Programming/Programming_Tutorials/Exal/Exal_Game_Engine/Exal_Game_Engine/v1/src/Core/Engine.cpp	/^bool Engine::init()$/;"	function	line:5	class:Engine	signature:()	returns:bool Engine :: 
-update	/home/alex/Dropbox/Alex/Programming/Programming_Tutorials/Exal/Exal_Game_Engine/Exal_Game_Engine/v1/src/Core/Engine.cpp	/^void Engine::update(){$/;"	function	line:53	class:Engine	signature:()	returns:void Engine :: 
-render	/home/alex/Dropbox/Alex/Programming/Programming_Tutorials/Exal/Exal_Game_Engine/Exal_Game_Engine/v1/src/Core/Engine.cpp	/^void Engine::render()$/;"	function	line:57	class:Engine	signature:()	returns:void Engine :: 
-event	/home/alex/Dropbox/Alex/Programming/Programming_Tutorials/Exal/Exal_Game_Engine/Exal_Game_Engine/v1/src/Core/Engine.cpp	/^void Engine::event()$/;"	function	line:93	class:Engine	signature:()	returns:void Engine :: 
-clean	/home/alex/Dropbox/Alex/Programming/Programming_Tutorials/Exal/Exal_Game_Engine/Exal_Game_Engine/v1/src/Core/Engine.cpp	/^bool Engine::clean()$/;"	function	line:123	class:Engine	signature:()	returns:bool Engine :: 
-quit	/home/alex/Dropbox/Alex/Programming/Programming_Tutorials/Exal/Exal_Game_Engine/Exal_Game_Engine/v1/src/Core/Engine.cpp	/^void Engine::quit()$/;"	function	line:132	class:Engine	signature:()	returns:void Engine :: 
+main	/home/alex/Dropbox/Alex/Programming/Programming_Tutorials/Exal/Exal_Game_Engine/Exal_Game_Engine/v1/main.cpp	/^int main(int argc, char **argv)$/;"	function	line:10	signature:(int argc, char **argv)	returns:int 

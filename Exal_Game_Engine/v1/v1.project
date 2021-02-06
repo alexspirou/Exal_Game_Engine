@@ -49,6 +49,7 @@
       <Linker Options="" Required="yes">
         <Library Value="SDL2"/>
         <Library Value="SDL2_image"/>
+        <Library Value="SDL2_gfx"/>
       </Linker>
       <ResourceCompiler Options="" Required="no"/>
       <General OutputFile="$(IntermediateDirectory)/$(ProjectName)" IntermediateDirectory="$(ConfigurationName)" Command="$(OutputFile)" CommandArguments="" UseSeparateDebugArgs="no" DebugArguments="" WorkingDirectory="" PauseExecWhenProcTerminates="yes" IsGUIProgram="no" IsEnabled="yes"/>

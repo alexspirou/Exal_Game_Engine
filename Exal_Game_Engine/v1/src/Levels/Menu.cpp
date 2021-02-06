@@ -51,7 +51,10 @@ void Menu::render(){
     }         
 }   
     
-
+//void Menu::difficulty(){
+//    
+//
+//}
 
 void Menu::update(){
     
