@@ -25,9 +25,9 @@ bool Engine::init()
     menu = new Menu();
     player = new Mage();
     levels = new Stages();
+    background = new BackGround();
     texManager.load("backround", "src/assets/backround3.png");
-    texManager.load("gameover", "src/assets/game_over.png");
-    texManager.load("again", "src/assets/play_again.png"); 
+
     texManager.load("menu", "src/assets/start_menu.png");
 
     return m_isRunning = true;
@@ -49,51 +49,41 @@ void Engine::start_menu(){
 void Engine::update(){
         
     levels->update();
+   background->update();
 }
 void Engine::render()
 {   
-//    if(!levels->is_gameover() && !menu->get_menu()){
-        if(levels->get_b_menu()){
-        }
-            SDL_RenderClear(m_renderer);
+            //Game starts
+            SDL_RenderClear(Engine::m_renderer);
+            background->render();
             player->freeze = false;
-            texManager.draw("backround", x, 0, 1200, 1000);
-            texManager.draw("backround", x2, 0, 1200, 1000);
-            x --;
-            x2 --;
-            if(x < -1200){
-                x = 0;
-            }
-            if(x2 <0){
-                x2 = 1200;
-            }
-
-            levels->render(); 
-            //While game is on
-            if (!levels->check_colission_meteors()){
+            levels->render();
+            //Check collisions with meteors and energies
+            if (!levels->check_colission_meteors() && levels->get_counter()!=4){
                 player->draw();
                 levels->check_colission_energies();
                 levels->render_counter();
+            }
+            //Check winnder
+            else if(levels->get_counter() ==4)
+            {
+            while(1){
+                background->win_background();
+                event();
+            }
+            
+            }
             //Gameover 
-            }else{
+            else{
                 levels->set_gameover(true);
                 std::cout << "gameover = true " <<std::endl;
                 while(levels->is_gameover()){
                     event();
-                    SDL_RenderClear(m_renderer);
-                    player->freeze = true;
-                    texManager.draw("backround", 0, 0, 1000, 1000);
-                    texManager.draw("gameover", 250, 50, 528/2, 528/2);
-                    texManager.draw("again", 0, 300, 800, 100);
-                    SDL_RenderPresent(m_renderer);
-                
-                    
+                    background->gameover_background();
                 }
-        
             }
             SDL_Delay(10);
             SDL_RenderPresent(m_renderer);
-    //}
 }   
 void Engine::event()
 {
@@ -106,13 +96,13 @@ void Engine::event()
         case SDL_QUIT:{
             quit();
             break;
-            
         }
         case SDL_KEYDOWN:
         {
             if (event.key.keysym.sym == SDLK_F2){
                 levels->reset_level();
                 levels->set_gameover(false);
+
                 break;
                
                

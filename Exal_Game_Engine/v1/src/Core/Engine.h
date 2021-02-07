@@ -8,6 +8,7 @@
 #include "src/Characters/Meteors.h"
 #include "src/Graphics/TextureManager.h"
 #include "src/Levels/Menu.h"
+#include "src/Levels/BackGround.h"
 
 #define SCREEN_WIDTH 640
 #define SCREEN_HEIGHT 800
@@ -40,7 +41,7 @@ private:
     Stages* levels = nullptr;
     TextureManager texManager;
     Menu* menu = nullptr;
-    int x = 0;
-    int x2 = 1200;
+    BackGround* background = nullptr;;
+
 };
 #endif // _ENGINE_H_

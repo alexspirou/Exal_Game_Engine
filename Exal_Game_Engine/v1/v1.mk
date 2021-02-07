@@ -13,7 +13,7 @@ CurrentFileName        :=
 CurrentFilePath        :=
 CurrentFileFullPath    :=
 User                   :=alex
-Date                   :=06/02/21
+Date                   :=07/02/21
 CodeLitePath           :=/home/alex/.codelite
 LinkerName             :=/usr/bin/g++-7
 SharedObjectLinkerName :=/usr/bin/g++-7 -shared -fPIC
@@ -60,7 +60,7 @@ AS       := /usr/bin/as
 ## User defined environment variables
 ##
 CodeLiteDir:=/usr/share/codelite
-Objects0=$(IntermediateDirectory)/src_Core_Engine.cpp$(ObjectSuffix) $(IntermediateDirectory)/src_Levels_Stages.cpp$(ObjectSuffix) $(IntermediateDirectory)/main.cpp$(ObjectSuffix) $(IntermediateDirectory)/src_Levels_Menu.cpp$(ObjectSuffix) $(IntermediateDirectory)/src_Characters_Energy.cpp$(ObjectSuffix) $(IntermediateDirectory)/src_Characters_Mage.cpp$(ObjectSuffix) $(IntermediateDirectory)/src_Characters_Meteors.cpp$(ObjectSuffix) $(IntermediateDirectory)/src_Graphics_TextureManager.cpp$(ObjectSuffix) 
+Objects0=$(IntermediateDirectory)/src_Levels_BackGround.cpp$(ObjectSuffix) $(IntermediateDirectory)/src_Core_Engine.cpp$(ObjectSuffix) $(IntermediateDirectory)/src_Levels_Stages.cpp$(ObjectSuffix) $(IntermediateDirectory)/main.cpp$(ObjectSuffix) $(IntermediateDirectory)/src_Levels_Menu.cpp$(ObjectSuffix) $(IntermediateDirectory)/src_Characters_Energy.cpp$(ObjectSuffix) $(IntermediateDirectory)/src_Characters_Mage.cpp$(ObjectSuffix) $(IntermediateDirectory)/src_Characters_Meteors.cpp$(ObjectSuffix) $(IntermediateDirectory)/src_Graphics_TextureManager.cpp$(ObjectSuffix) 
 
 
 
@@ -91,6 +91,12 @@ PreBuild:
 ##
 ## Objects
 ##
+$(IntermediateDirectory)/src_Levels_BackGround.cpp$(ObjectSuffix): src/Levels/BackGround.cpp
+	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/src_Levels_BackGround.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/src_Levels_BackGround.cpp$(DependSuffix) -MM src/Levels/BackGround.cpp
+	$(CXX) $(IncludePCH) $(SourceSwitch) "/home/alex/Dropbox/Alex/Programming/Programming_Tutorials/Exal/Exal_Game_Engine/Exal_Game_Engine/v1/src/Levels/BackGround.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/src_Levels_BackGround.cpp$(ObjectSuffix) $(IncludePath)
+$(IntermediateDirectory)/src_Levels_BackGround.cpp$(PreprocessSuffix): src/Levels/BackGround.cpp
+	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/src_Levels_BackGround.cpp$(PreprocessSuffix) src/Levels/BackGround.cpp
+
 $(IntermediateDirectory)/src_Core_Engine.cpp$(ObjectSuffix): src/Core/Engine.cpp
 	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/src_Core_Engine.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/src_Core_Engine.cpp$(DependSuffix) -MM src/Core/Engine.cpp
 	$(CXX) $(IncludePCH) $(SourceSwitch) "/home/alex/Dropbox/Alex/Programming/Programming_Tutorials/Exal/Exal_Game_Engine/Exal_Game_Engine/v1/src/Core/Engine.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/src_Core_Engine.cpp$(ObjectSuffix) $(IncludePath)

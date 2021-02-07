@@ -96,7 +96,7 @@ void Stages::level_2(){
 void Stages::update(){
 if(!is_gameover() && b_level_1){
    for(std::size_t i{0}; i<meteors.size(); i++){
-        meteors.at(i)->destRect.x -= 3;
+        meteors.at(i)->destRect.x -= 0;
         if (meteors.at(i)->destRect.x < -100)
             meteors.at(i)->destRect.x = 1000;
         }

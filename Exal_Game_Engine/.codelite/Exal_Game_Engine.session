@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Session Name="/home/alex/Dropbox/Alex/Programming/Programming_Tutorials/Exal/Exal_Game_Engine/Exal_Game_Engine/Exal_Game_Engine.workspace">
-  <int Value="15" Name="m_selectedTab"/>
+  <int Value="1" Name="m_selectedTab"/>
   <wxString Value="/home/alex/Dropbox/Alex/Programming/Programming_Tutorials/Exal/Exal_Game_Engine/Exal_Game_Engine/Exal_Game_Engine.workspace" Name="m_workspaceName"/>
   <TabInfoArray Name="TabInfoArray">
     <TabInfo>
@@ -12,15 +12,15 @@
     </TabInfo>
     <TabInfo>
       <wxString Value="/home/alex/Dropbox/Alex/Programming/Programming_Tutorials/Exal/Exal_Game_Engine/Exal_Game_Engine/v1/src/Core/Engine.cpp" Name="FileName"/>
-      <int Value="34" Name="FirstVisibleLine"/>
-      <int Value="37" Name="CurrentLine"/>
+      <int Value="0" Name="FirstVisibleLine"/>
+      <int Value="115" Name="CurrentLine"/>
       <wxArrayString Name="Bookmarks"/>
       <IntVector Name="CollapsedFolds"/>
     </TabInfo>
     <TabInfo>
       <wxString Value="/home/alex/Dropbox/Alex/Programming/Programming_Tutorials/Exal/Exal_Game_Engine/Exal_Game_Engine/v1/src/Characters/Mage.cpp" Name="FileName"/>
-      <int Value="37" Name="FirstVisibleLine"/>
-      <int Value="39" Name="CurrentLine"/>
+      <int Value="65" Name="FirstVisibleLine"/>
+      <int Value="67" Name="CurrentLine"/>
       <wxArrayString Name="Bookmarks"/>
       <IntVector Name="CollapsedFolds"/>
     </TabInfo>
@@ -47,15 +47,15 @@
     </TabInfo>
     <TabInfo>
       <wxString Value="/home/alex/Dropbox/Alex/Programming/Programming_Tutorials/Exal/Exal_Game_Engine/Exal_Game_Engine/v1/src/Levels/Stages.cpp" Name="FileName"/>
-      <int Value="158" Name="FirstVisibleLine"/>
-      <int Value="161" Name="CurrentLine"/>
+      <int Value="104" Name="FirstVisibleLine"/>
+      <int Value="105" Name="CurrentLine"/>
       <wxArrayString Name="Bookmarks"/>
       <IntVector Name="CollapsedFolds"/>
     </TabInfo>
     <TabInfo>
       <wxString Value="/home/alex/Dropbox/Alex/Programming/Programming_Tutorials/Exal/Exal_Game_Engine/Exal_Game_Engine/v1/src/Graphics/TextureManager.cpp" Name="FileName"/>
-      <int Value="36" Name="FirstVisibleLine"/>
-      <int Value="38" Name="CurrentLine"/>
+      <int Value="22" Name="FirstVisibleLine"/>
+      <int Value="23" Name="CurrentLine"/>
       <wxArrayString Name="Bookmarks"/>
       <IntVector Name="CollapsedFolds"/>
     </TabInfo>
@@ -68,14 +68,14 @@
     </TabInfo>
     <TabInfo>
       <wxString Value="/home/alex/Dropbox/Alex/Programming/Programming_Tutorials/Exal/Exal_Game_Engine/Exal_Game_Engine/v1/src/Core/Engine.h" Name="FileName"/>
-      <int Value="9" Name="FirstVisibleLine"/>
-      <int Value="10" Name="CurrentLine"/>
+      <int Value="41" Name="FirstVisibleLine"/>
+      <int Value="43" Name="CurrentLine"/>
       <wxArrayString Name="Bookmarks"/>
       <IntVector Name="CollapsedFolds"/>
     </TabInfo>
     <TabInfo>
       <wxString Value="/home/alex/Dropbox/Alex/Programming/Programming_Tutorials/Exal/Exal_Game_Engine/Exal_Game_Engine/v1/main.cpp" Name="FileName"/>
-      <int Value="18" Name="FirstVisibleLine"/>
+      <int Value="19" Name="FirstVisibleLine"/>
       <int Value="21" Name="CurrentLine"/>
       <wxArrayString Name="Bookmarks"/>
       <IntVector Name="CollapsedFolds"/>
@@ -89,7 +89,7 @@
     </TabInfo>
     <TabInfo>
       <wxString Value="/home/alex/Dropbox/Alex/Programming/Programming_Tutorials/Exal/Exal_Game_Engine/Exal_Game_Engine/v1/src/Characters/Energy.h" Name="FileName"/>
-      <int Value="13" Name="FirstVisibleLine"/>
+      <int Value="14" Name="FirstVisibleLine"/>
       <int Value="16" Name="CurrentLine"/>
       <wxArrayString Name="Bookmarks"/>
       <IntVector Name="CollapsedFolds"/>
@@ -110,8 +110,8 @@
     </TabInfo>
     <TabInfo>
       <wxString Value="/home/alex/Dropbox/Alex/Programming/Programming_Tutorials/Exal/Exal_Game_Engine/Exal_Game_Engine/v1/src/Levels/Menu.cpp" Name="FileName"/>
-      <int Value="61" Name="FirstVisibleLine"/>
-      <int Value="62" Name="CurrentLine"/>
+      <int Value="96" Name="FirstVisibleLine"/>
+      <int Value="98" Name="CurrentLine"/>
       <wxArrayString Name="Bookmarks"/>
       <IntVector Name="CollapsedFolds"/>
     </TabInfo>
@@ -119,6 +119,13 @@
       <wxString Value="/home/alex/Dropbox/Alex/Programming/Programming_Tutorials/Exal/Exal_Game_Engine/Exal_Game_Engine/v1/src/Levels/Menu.h" Name="FileName"/>
       <int Value="9" Name="FirstVisibleLine"/>
       <int Value="11" Name="CurrentLine"/>
+      <wxArrayString Name="Bookmarks"/>
+      <IntVector Name="CollapsedFolds"/>
+    </TabInfo>
+    <TabInfo>
+      <wxString Value="/usr/include/c++/7/bits/stl_tree.h" Name="FileName"/>
+      <int Value="769" Name="FirstVisibleLine"/>
+      <int Value="771" Name="CurrentLine"/>
       <wxArrayString Name="Bookmarks"/>
       <IntVector Name="CollapsedFolds"/>
     </TabInfo>
