@@ -7,4 +7,5 @@ SDL Games. The game is under constuction.
 ## Game logic
 You control an aircraft which can be moved in x,y axis. The main purpose of the game is to collect 4 green symbols, I called them energies, while you're avoiding the meteors which are moved at x axis. 
 
-
+##Game preview
+![](/Images/github.gif)
